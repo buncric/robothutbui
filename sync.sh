@@ -1,7 +1,8 @@
 #!/bin/sh
-# Chép lab/ + docs/ từ dự án vào repo deploy (bỏ node_modules, dist). Chạy lại mỗi lần muốn cập nhật web.
+# Build lab 3D + game ở máy rồi chép bản đã build vào site/ (máy chủ chỉ cần nginx, không cần npm).
+# Dùng: ./sync.sh && git add -A && git commit -m "cập nhật" && git push   → rồi redeploy trên Vibe Host
 set -e
 cd "$(dirname "$0")"
-R=../..
-rsync -a --delete --exclude node_modules --exclude dist --exclude .DS_Store "$R/lab/" lab/
-rsync -a --delete --include '*.md' --exclude '*' "$R/docs/" docs/
+W=$(pwd)
+cd ../../lab
+npx vite build --outDir "$W/site" --emptyOutDir

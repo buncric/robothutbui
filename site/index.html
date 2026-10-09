@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RoboVac Lab 3D</title>
+    <script type="module" crossorigin src="/assets/lab-C5w9OHgk.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/RoomEnvironment-BiDvJ89I.js">
+    <link rel="modulepreload" crossorigin href="/assets/cad-Ctgp4isQ.js">
+    <link rel="stylesheet" crossorigin href="/assets/lab-BdS3-o-4.css">
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <button id="menuBtn" class="icon-btn" aria-label="Danh mục">☰</button>
+        <div class="brand"><span class="logo">◎</span> RoboVac Lab <small>3D · học linh kiện từ con ốc</small></div>
+        <input id="search" type="search" placeholder="Tìm linh kiện… (vd: ốc, động cơ, PIC)" />
+        <div class="progress" title="Số linh kiện đã học"><span id="progressText">0/0</span><div class="bar"><i id="progressBar"></i></div></div>
+        <button id="themeBtn" class="icon-btn" aria-label="Đổi giao diện sáng/tối">◐</button>
+      </header>
+
+      <nav id="sidebar" class="sidebar"></nav>
+
+      <main class="stage">
+        <div id="viewport" class="viewport">
+          <div class="viewport-toolbar">
+            <button data-act="reset" title="Đưa camera về giữa">⟲ Góc nhìn</button>
+            <button data-act="labels" title="Bật/tắt nhãn">🏷 Nhãn</button>
+            <button data-act="rotate" title="Tự xoay">↻ Tự xoay</button>
+            <button data-act="wire" title="Khung dây">▦ Khung dây</button>
+          </div>
+          <div id="tooltip" class="tooltip" hidden></div>
+          <div id="compTitle" class="comp-title"></div>
+          <div id="faultCard" class="fault-card" hidden></div>
+        </div>
+        <section class="dock">
+          <div class="dock-col">
+            <h3>🎛 Thí nghiệm</h3>
+            <div id="controls" class="controls"></div>
+            <div id="steps" class="steps"></div>
+            <div id="faults" class="faults"></div>
+          </div>
+          <div class="dock-col">
+            <h3>📟 Số đo</h3>
+            <div id="readouts" class="readouts"></div>
+          </div>
+          <div class="dock-col scope-col">
+            <h3>〰 Máy hiện sóng <small id="scopeNote"></small></h3>
+            <canvas id="scope"></canvas>
+          </div>
+        </section>
+      </main>
+
+      <aside id="panel" class="panel">
+        <div class="tabs" id="tabs"></div>
+        <div class="tab-body" id="tabBody"></div>
+        <div class="part-box" id="partBox" hidden></div>
+        <button id="doneBtn" class="done-btn">✓ Đánh dấu đã học</button>
+      </aside>
+    </div>
+  </body>
+</html>

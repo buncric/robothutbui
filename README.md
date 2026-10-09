@@ -6,4 +6,4 @@ Phòng lab 3D học linh kiện robot hút bụi (PIC16F877A + ESP32-S3) và gam
 - `/game.html` — Game phòng lab (hàn mạch, kính hiển vi, bàn 3D…)
 
 Chạy ở máy: `cd lab && npm install && npm run dev`.
-Deploy: Dockerfile (Vite build → nginx).
+Deploy: `./sync.sh` build ở máy vào `site/`, Dockerfile chỉ chạy nginx.
