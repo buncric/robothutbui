@@ -1,0 +1,5537 @@
+{
+ "_note": "Nhóm vendor — linh kiện mua sẵn tải từ step.parts (sinh bởi cad/build_vendor.py). Toạ độ trong 'interact' theo hệ lab/three.js sau khi nạp GLB (×1000 → mm): Y hướng lên, gốc = tâm hộp bao XY của STEP đã gắn nhãn, y = 0 là mặt đặt (THT: mặt PCB, chân thò xuống −Y). Tên node GLB = nhãn: body/ic_*/conn_*/socket_*/btn_*/trim_*/lever_*/shaft*/pin_<n>.",
+ "models": [
+  {
+   "path": "vendor/package_dip_040pin_generic",
+   "name": "Vỏ DIP-40 (PIC16F877A) — mẫu đơn giản",
+   "group": "IC",
+   "source": "step.parts: package_dip_040pin_generic — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "52.3 × 13.9 × 5.2 mm",
+   "note": "Mẫu cũ (giản lược). Dùng dip_40_w15_24mm cho hình thật.",
+   "nodes": [
+    "ic_dip40"
+   ]
+  },
+  {
+   "path": "vendor/bearing_608zz",
+   "name": "Ổ bi 608ZZ (8×22×7 mm)",
+   "group": "Cơ khí",
+   "source": "step.parts: bearing_608zz — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "22 × 22 × 7 mm",
+   "nodes": [
+    "bearing"
+   ]
+  },
+  {
+   "path": "vendor/iso4762_socket_head_cap_screw_m3x8",
+   "name": "Ốc lục giác chìm M3×8 ISO 4762",
+   "group": "Ốc vít",
+   "source": "step.parts: iso4762_socket_head_cap_screw_m3x8 — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "5.5 × 5.5 × 11 mm",
+   "nodes": [
+    "screw"
+   ],
+   "interact": [
+    {
+     "node": "screw",
+     "thread": "M3",
+     "pitch_mm": 0.5,
+     "type": "screw",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "tip": [
+      0,
+      0,
+      0
+     ],
+     "length_mm": 8.0,
+     "turns_full": 16.0,
+     "drive": "hex socket"
+    }
+   ]
+  },
+  {
+   "path": "vendor/dip_40_w15_24mm",
+   "name": "Vi điều khiển PIC16F877A-I/P — vỏ DIP-40 600 mil (hàng chân cách 15,24 mm)",
+   "group": "IC",
+   "source": "step.parts: dip_40_w15_24mm — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "15.5 × 50.8 × 7 mm",
+   "note": "Vỏ PDIP-40 chuẩn JEDEC MS-011: bước chân 2,54 mm, hai hàng cách 15,24 mm — đúng PIC16F877A-I/P.",
+   "nodes": [
+    "ic_pic16f877a",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4",
+    "pin_5",
+    "pin_6",
+    "pin_7",
+    "pin_8",
+    "pin_9",
+    "pin_10",
+    "pin_11",
+    "pin_12",
+    "pin_13",
+    "pin_14",
+    "pin_15",
+    "pin_16",
+    "pin_17",
+    "pin_18",
+    "pin_19",
+    "pin_20",
+    "pin_21",
+    "pin_22",
+    "pin_23",
+    "pin_24",
+    "pin_25",
+    "pin_26",
+    "pin_27",
+    "pin_28",
+    "pin_29",
+    "pin_30",
+    "pin_31",
+    "pin_32",
+    "pin_33",
+    "pin_34",
+    "pin_35",
+    "pin_36",
+    "pin_37",
+    "pin_38",
+    "pin_39",
+    "pin_40"
+   ],
+   "interact": [
+    {
+     "node": "ic_pic16f877a",
+     "type": "ic",
+     "insert_into": "socket_dip40",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "travel_mm": 3.0
+    },
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 40,
+     "nodes": "pin_1..pin_40",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -7.62,
+       -3.3,
+       -24.13
+      ],
+      [
+       -7.62,
+       -3.3,
+       -21.59
+      ],
+      [
+       -7.62,
+       -3.3,
+       -19.05
+      ],
+      [
+       -7.62,
+       -3.3,
+       -16.51
+      ],
+      [
+       -7.62,
+       -3.3,
+       -13.97
+      ],
+      [
+       -7.62,
+       -3.3,
+       -11.43
+      ],
+      [
+       -7.62,
+       -3.3,
+       -8.89
+      ],
+      [
+       -7.62,
+       -3.3,
+       -6.35
+      ],
+      [
+       -7.62,
+       -3.3,
+       -3.81
+      ],
+      [
+       -7.62,
+       -3.3,
+       -1.27
+      ],
+      [
+       -7.62,
+       -3.3,
+       1.27
+      ],
+      [
+       -7.62,
+       -3.3,
+       3.81
+      ],
+      [
+       -7.62,
+       -3.3,
+       6.35
+      ],
+      [
+       -7.62,
+       -3.3,
+       8.89
+      ],
+      [
+       -7.62,
+       -3.3,
+       11.43
+      ],
+      [
+       -7.62,
+       -3.3,
+       13.97
+      ],
+      [
+       -7.62,
+       -3.3,
+       16.51
+      ],
+      [
+       -7.62,
+       -3.3,
+       19.05
+      ],
+      [
+       -7.62,
+       -3.3,
+       21.59
+      ],
+      [
+       -7.62,
+       -3.3,
+       24.13
+      ],
+      [
+       7.62,
+       -3.3,
+       24.13
+      ],
+      [
+       7.62,
+       -3.3,
+       21.59
+      ],
+      [
+       7.62,
+       -3.3,
+       19.05
+      ],
+      [
+       7.62,
+       -3.3,
+       16.51
+      ],
+      [
+       7.62,
+       -3.3,
+       13.97
+      ],
+      [
+       7.62,
+       -3.3,
+       11.43
+      ],
+      [
+       7.62,
+       -3.3,
+       8.89
+      ],
+      [
+       7.62,
+       -3.3,
+       6.35
+      ],
+      [
+       7.62,
+       -3.3,
+       3.81
+      ],
+      [
+       7.62,
+       -3.3,
+       1.27
+      ],
+      [
+       7.62,
+       -3.3,
+       -1.27
+      ],
+      [
+       7.62,
+       -3.3,
+       -3.81
+      ],
+      [
+       7.62,
+       -3.3,
+       -6.35
+      ],
+      [
+       7.62,
+       -3.3,
+       -8.89
+      ],
+      [
+       7.62,
+       -3.3,
+       -11.43
+      ],
+      [
+       7.62,
+       -3.3,
+       -13.97
+      ],
+      [
+       7.62,
+       -3.3,
+       -16.51
+      ],
+      [
+       7.62,
+       -3.3,
+       -19.05
+      ],
+      [
+       7.62,
+       -3.3,
+       -21.59
+      ],
+      [
+       7.62,
+       -3.3,
+       -24.13
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.54
+    }
+   ]
+  },
+  {
+   "path": "vendor/dip_14_w7_62mm",
+   "name": "IC 74HC32 (4 cổng OR) — vỏ DIP-14 300 mil",
+   "group": "IC",
+   "source": "step.parts: dip_14_w7_62mm — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "7.9 × 19 × 7 mm",
+   "note": "PDIP-14, hàng chân cách 7,62 mm. Dùng cho mạch OR tạo phanh 2 chiều DRV8871.",
+   "nodes": [
+    "ic_74hc32",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4",
+    "pin_5",
+    "pin_6",
+    "pin_7",
+    "pin_8",
+    "pin_9",
+    "pin_10",
+    "pin_11",
+    "pin_12",
+    "pin_13",
+    "pin_14"
+   ],
+   "interact": [
+    {
+     "node": "ic_74hc32",
+     "type": "ic",
+     "insert_into": "socket_dip14",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "travel_mm": 3.0
+    },
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 14,
+     "nodes": "pin_1..pin_14",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -3.81,
+       -3.3,
+       -7.62
+      ],
+      [
+       -3.81,
+       -3.3,
+       -5.08
+      ],
+      [
+       -3.81,
+       -3.3,
+       -2.54
+      ],
+      [
+       -3.81,
+       -3.3,
+       -0.0
+      ],
+      [
+       -3.81,
+       -3.3,
+       2.54
+      ],
+      [
+       -3.81,
+       -3.3,
+       5.08
+      ],
+      [
+       -3.81,
+       -3.3,
+       7.62
+      ],
+      [
+       3.81,
+       -3.3,
+       7.62
+      ],
+      [
+       3.81,
+       -3.3,
+       5.08
+      ],
+      [
+       3.81,
+       -3.3,
+       2.54
+      ],
+      [
+       3.81,
+       -3.3,
+       -0.0
+      ],
+      [
+       3.81,
+       -3.3,
+       -2.54
+      ],
+      [
+       3.81,
+       -3.3,
+       -5.08
+      ],
+      [
+       3.81,
+       -3.3,
+       -7.62
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.54
+    }
+   ]
+  },
+  {
+   "path": "vendor/ti_so_powerpad_8",
+   "name": "Driver động cơ DRV8871 — vỏ SO-8 PowerPAD (HSOP-8, DDA)",
+   "group": "IC",
+   "source": "step.parts: ti_so_powerpad_8 — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "5.4 × 4.9 × 1.1 mm",
+   "note": "TI DDA (SO PowerPAD-8) 4,9×3,9 mm, bước 1,27 mm, có đế tản nhiệt dưới bụng.",
+   "nodes": [
+    "ic_drv8871"
+   ],
+   "interact": [
+    {
+     "node": "ic_drv8871",
+     "type": "smd",
+     "count": 8,
+     "pitch_mm": 1.27,
+     "pin1_corner": "-X -Z (chấm tròn)"
+    }
+   ]
+  },
+  {
+   "path": "vendor/qfn_24_4x4mm_p0_5mm",
+   "name": "Cảm biến IMU MPU-6050 — vỏ QFN-24 4×4×0,9 mm",
+   "group": "IC",
+   "source": "step.parts: qfn_24_4x4mm_p0_5mm — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "4 × 4 × 0.8 mm",
+   "note": "Thân chip trên module GY-521. QFN 4×4 mm, bước 0,5 mm.",
+   "nodes": [
+    "ic_mpu6050"
+   ],
+   "interact": [
+    {
+     "node": "ic_mpu6050",
+     "type": "smd",
+     "count": 24,
+     "pitch_mm": 0.5
+    }
+   ]
+  },
+  {
+   "path": "vendor/sot_223",
+   "name": "Ổn áp LDO AMS1117-3.3 — vỏ SOT-223",
+   "group": "IC",
+   "source": "step.parts: sot_223 — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "7 × 6.5 × 1.7 mm",
+   "note": "LDO 3,3 V trên ESP32-S3-DevKitC-1 và GY-521.",
+   "nodes": [
+    "ic_ams1117"
+   ],
+   "interact": [
+    {
+     "node": "ic_ams1117",
+     "type": "smd",
+     "count": 4,
+     "pitch_mm": 2.3
+    }
+   ]
+  },
+  {
+   "path": "vendor/to_263_5_tabpin3",
+   "name": "IC hạ áp XL4015 / LM2596 — vỏ TO-263-5",
+   "group": "IC",
+   "source": "step.parts: to_263_5_tabpin3 — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "15 × 10 × 4.4 mm",
+   "note": "Cả XL4015 (5 A) và LM2596 dùng vỏ TO-263-5L, chân 1,7 mm.",
+   "nodes": [
+    "ic_xl4015"
+   ],
+   "interact": [
+    {
+     "node": "ic_xl4015",
+     "type": "smd",
+     "count": 5,
+     "pitch_mm": 1.7
+    }
+   ]
+  },
+  {
+   "path": "vendor/sparkfun_st_vl53l1x",
+   "name": "Cảm biến khoảng cách ToF VL53L1X — vỏ LGA quang",
+   "group": "IC",
+   "source": "step.parts: sparkfun_st_vl53l1x — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "4.9 × 2.5 × 1.6 mm",
+   "note": "Chip ToF 4,9×2,5×1,56 mm (tham khảo cho cảm biến khoảng cách).",
+   "nodes": [
+    "ic_vl53l1x"
+   ]
+  },
+  {
+   "path": "vendor/dip_40_w15_24mm_socket",
+   "name": "Đế IC 40 chân 600 mil (cho PIC16F877A)",
+   "group": "Đầu nối",
+   "source": "step.parts: dip_40_w15_24mm_socket — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "17.8 × 50.8 × 7.8 mm",
+   "note": "Mẫu KiCad là đế lá kẹp; đế 'tròn' (machined) cùng kích thước bước/hàng.",
+   "nodes": [
+    "socket_dip40",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4",
+    "pin_5",
+    "pin_6",
+    "pin_7",
+    "pin_8",
+    "pin_9",
+    "pin_10",
+    "pin_11",
+    "pin_12",
+    "pin_13",
+    "pin_14",
+    "pin_15",
+    "pin_16",
+    "pin_17",
+    "pin_18",
+    "pin_19",
+    "pin_20",
+    "pin_21",
+    "pin_22",
+    "pin_23",
+    "pin_24",
+    "pin_25",
+    "pin_26",
+    "pin_27",
+    "pin_28",
+    "pin_29",
+    "pin_30",
+    "pin_31",
+    "pin_32",
+    "pin_33",
+    "pin_34",
+    "pin_35",
+    "pin_36",
+    "pin_37",
+    "pin_38",
+    "pin_39",
+    "pin_40"
+   ],
+   "interact": [
+    {
+     "node": "socket_dip40",
+     "type": "socket",
+     "accepts": "dip40-600mil",
+     "pitch_mm": 2.54,
+     "row_spacing_mm": 15.24,
+     "count": 40
+    },
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 40,
+     "nodes": "pin_1..pin_40",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -7.62,
+       -3.78,
+       -24.13
+      ],
+      [
+       -7.62,
+       -3.78,
+       -21.59
+      ],
+      [
+       -7.62,
+       -3.78,
+       -19.05
+      ],
+      [
+       -7.62,
+       -3.78,
+       -16.51
+      ],
+      [
+       -7.62,
+       -3.78,
+       -13.97
+      ],
+      [
+       -7.62,
+       -3.78,
+       -11.43
+      ],
+      [
+       -7.62,
+       -3.78,
+       -8.89
+      ],
+      [
+       -7.62,
+       -3.78,
+       -6.35
+      ],
+      [
+       -7.62,
+       -3.78,
+       -3.81
+      ],
+      [
+       -7.62,
+       -3.78,
+       -1.27
+      ],
+      [
+       -7.62,
+       -3.78,
+       1.27
+      ],
+      [
+       -7.62,
+       -3.78,
+       3.81
+      ],
+      [
+       -7.62,
+       -3.78,
+       6.35
+      ],
+      [
+       -7.62,
+       -3.78,
+       8.89
+      ],
+      [
+       -7.62,
+       -3.78,
+       11.43
+      ],
+      [
+       -7.62,
+       -3.78,
+       13.97
+      ],
+      [
+       -7.62,
+       -3.78,
+       16.51
+      ],
+      [
+       -7.62,
+       -3.78,
+       19.05
+      ],
+      [
+       -7.62,
+       -3.78,
+       21.59
+      ],
+      [
+       -7.62,
+       -3.78,
+       24.13
+      ],
+      [
+       7.62,
+       -3.78,
+       24.13
+      ],
+      [
+       7.62,
+       -3.78,
+       21.59
+      ],
+      [
+       7.62,
+       -3.78,
+       19.05
+      ],
+      [
+       7.62,
+       -3.78,
+       16.51
+      ],
+      [
+       7.62,
+       -3.78,
+       13.97
+      ],
+      [
+       7.62,
+       -3.78,
+       11.43
+      ],
+      [
+       7.62,
+       -3.78,
+       8.89
+      ],
+      [
+       7.62,
+       -3.78,
+       6.35
+      ],
+      [
+       7.62,
+       -3.78,
+       3.81
+      ],
+      [
+       7.62,
+       -3.78,
+       1.27
+      ],
+      [
+       7.62,
+       -3.78,
+       -1.27
+      ],
+      [
+       7.62,
+       -3.78,
+       -3.81
+      ],
+      [
+       7.62,
+       -3.78,
+       -6.35
+      ],
+      [
+       7.62,
+       -3.78,
+       -8.89
+      ],
+      [
+       7.62,
+       -3.78,
+       -11.43
+      ],
+      [
+       7.62,
+       -3.78,
+       -13.97
+      ],
+      [
+       7.62,
+       -3.78,
+       -16.51
+      ],
+      [
+       7.62,
+       -3.78,
+       -19.05
+      ],
+      [
+       7.62,
+       -3.78,
+       -21.59
+      ],
+      [
+       7.62,
+       -3.78,
+       -24.13
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.54
+    }
+   ]
+  },
+  {
+   "path": "vendor/dip_14_w7_62mm_socket",
+   "name": "Đế IC 14 chân 300 mil (cho 74HC32)",
+   "group": "Đầu nối",
+   "source": "step.parts: dip_14_w7_62mm_socket — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "10.2 × 17.8 × 7.8 mm",
+   "nodes": [
+    "socket_dip14",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4",
+    "pin_5",
+    "pin_6",
+    "pin_7",
+    "pin_8",
+    "pin_9",
+    "pin_10",
+    "pin_11",
+    "pin_12",
+    "pin_13",
+    "pin_14"
+   ],
+   "interact": [
+    {
+     "node": "socket_dip14",
+     "type": "socket",
+     "accepts": "dip14-300mil",
+     "pitch_mm": 2.54,
+     "row_spacing_mm": 7.62,
+     "count": 14
+    },
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 14,
+     "nodes": "pin_1..pin_14",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -3.81,
+       -3.78,
+       -7.62
+      ],
+      [
+       -3.81,
+       -3.78,
+       -5.08
+      ],
+      [
+       -3.81,
+       -3.78,
+       -2.54
+      ],
+      [
+       -3.81,
+       -3.78,
+       -0.0
+      ],
+      [
+       -3.81,
+       -3.78,
+       2.54
+      ],
+      [
+       -3.81,
+       -3.78,
+       5.08
+      ],
+      [
+       -3.81,
+       -3.78,
+       7.62
+      ],
+      [
+       3.81,
+       -3.78,
+       7.62
+      ],
+      [
+       3.81,
+       -3.78,
+       5.08
+      ],
+      [
+       3.81,
+       -3.78,
+       2.54
+      ],
+      [
+       3.81,
+       -3.78,
+       -0.0
+      ],
+      [
+       3.81,
+       -3.78,
+       -2.54
+      ],
+      [
+       3.81,
+       -3.78,
+       -5.08
+      ],
+      [
+       3.81,
+       -3.78,
+       -7.62
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.54
+    }
+   ]
+  },
+  {
+   "path": "vendor/to_220_3_vertical",
+   "name": "MOSFET IRLZ44N — vỏ TO-220-3 đứng",
+   "group": "Bán dẫn",
+   "source": "step.parts: to_220_3_vertical — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "10.3 × 4.5 × 28.5 mm",
+   "note": "Chân 1 G, 2 D (nối tab), 3 S. Bước 2,54 mm. Lỗ tab Ø3,6 mm bắt tản nhiệt M3.",
+   "nodes": [
+    "mosfet_irlz44n",
+    "pin_1",
+    "pin_2",
+    "pin_3"
+   ],
+   "interact": [
+    {
+     "node": "mosfet_irlz44n",
+     "type": "screw_hole",
+     "thread": "M3",
+     "note": "lỗ Ø3,6 trên tab"
+    },
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 3,
+     "nodes": "pin_1..pin_3",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -2.54,
+       -9.75,
+       0.932
+      ],
+      [
+       0.0,
+       -9.75,
+       0.932
+      ],
+      [
+       2.54,
+       -9.75,
+       0.932
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.54
+    }
+   ]
+  },
+  {
+   "path": "vendor/to_252_2",
+   "name": "MOSFET IRLR7843 — vỏ D-PAK (TO-252)",
+   "group": "Bán dẫn",
+   "source": "step.parts: to_252_2 — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "9.9 × 6.5 × 2.3 mm",
+   "note": "D-PAK hàn dán, tab = Drain.",
+   "nodes": [
+    "mosfet_irlr7843"
+   ],
+   "interact": [
+    {
+     "node": "mosfet_irlr7843",
+     "type": "smd",
+     "count": 3,
+     "pitch_mm": 4.57
+    }
+   ]
+  },
+  {
+   "path": "vendor/sot_23",
+   "name": "MOSFET BSS138 — vỏ SOT-23",
+   "group": "Bán dẫn",
+   "source": "step.parts: sot_23 — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "2.5 × 3 × 1.2 mm",
+   "note": "4 con trên mạch chuyển mức 3,3 V ⇄ 5 V.",
+   "nodes": [
+    "mosfet_bss138"
+   ],
+   "interact": [
+    {
+     "node": "mosfet_bss138",
+     "type": "smd",
+     "count": 3,
+     "pitch_mm": 0.95
+    }
+   ]
+  },
+  {
+   "path": "vendor/d_sma",
+   "name": "Diode Schottky SS34 — vỏ SMA (DO-214AC)",
+   "group": "Bán dẫn",
+   "source": "step.parts: d_sma — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "5 × 2.7 × 2.2 mm",
+   "note": "Vạch trắng = Cathode.",
+   "nodes": [
+    "diode_ss34"
+   ]
+  },
+  {
+   "path": "vendor/d_do_41_p10_16mm_horizontal",
+   "name": "Diode 1N4007 / 1N5819 — vỏ DO-41 nằm",
+   "group": "Bán dẫn",
+   "source": "step.parts: d_do_41_p10_16mm_horizontal — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "11 × 2.7 × 5.7 mm",
+   "note": "pin_1 = Cathode (vạch).",
+   "nodes": [
+    "diode_do41",
+    "pin_1",
+    "pin_2"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 2,
+     "nodes": "pin_1..pin_2",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -5.08,
+       -2.5,
+       0.0
+      ],
+      [
+       5.08,
+       -2.5,
+       0.0
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 10.16
+    }
+   ]
+  },
+  {
+   "path": "vendor/to_92_inline",
+   "name": "Transistor S8050 / 2N2222 — vỏ TO-92",
+   "group": "Bán dẫn",
+   "source": "step.parts: to_92_inline — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "4.8 × 3.7 × 9.8 mm",
+   "note": "Kích LED IR cảm biến chống rơi (RD4).",
+   "nodes": [
+    "transistor_to92",
+    "pin_1",
+    "pin_2",
+    "pin_3"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 3,
+     "nodes": "pin_1..pin_3",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -1.27,
+       -2.5,
+       0.542
+      ],
+      [
+       0.0,
+       -2.5,
+       0.542
+      ],
+      [
+       1.27,
+       -2.5,
+       0.542
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 1.27
+    }
+   ]
+  },
+  {
+   "path": "vendor/led_d5_0mm",
+   "name": "LED 5 mm",
+   "group": "Bán dẫn",
+   "source": "step.parts: led_d5_0mm — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "5.4 × 5.8 × 14.1 mm",
+   "note": "pin_1 = Cathode (chân ngắn, mặt vát).",
+   "nodes": [
+    "led_5mm",
+    "pin_1",
+    "pin_2"
+   ],
+   "interact": [
+    {
+     "node": "led_5mm",
+     "type": "led",
+     "color": "#FF2A2A"
+    },
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 2,
+     "nodes": "pin_1..pin_2",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -1.47,
+       -2.5,
+       -0.0
+      ],
+      [
+       1.07,
+       -2.5,
+       -0.0
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.54
+    }
+   ]
+  },
+  {
+   "path": "vendor/led_d3_0mm",
+   "name": "LED 3 mm",
+   "group": "Bán dẫn",
+   "source": "step.parts: led_d3_0mm — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "3.4 × 3.8 × 10.8 mm",
+   "note": "pin_1 = Cathode.",
+   "nodes": [
+    "led_3mm",
+    "pin_1",
+    "pin_2"
+   ],
+   "interact": [
+    {
+     "node": "led_3mm",
+     "type": "led",
+     "color": "#22DD44"
+    },
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 2,
+     "nodes": "pin_1..pin_2",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -1.47,
+       -2.5,
+       -0.0
+      ],
+      [
+       1.07,
+       -2.5,
+       -0.0
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.54
+    }
+   ]
+  },
+  {
+   "path": "vendor/led_d5_0mm_irblack",
+   "name": "LED hồng ngoại 5 mm (IR 940 nm, vỏ đen)",
+   "group": "Bán dẫn",
+   "source": "step.parts: led_d5_0mm_irblack — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "5.4 × 5.8 × 14.1 mm",
+   "note": "Phát IR cho cảm biến chống rơi tự chế.",
+   "nodes": [
+    "led_ir",
+    "pin_1",
+    "pin_2"
+   ],
+   "interact": [
+    {
+     "node": "led_ir",
+     "type": "led",
+     "color": "#400010",
+     "infrared": true
+    },
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 2,
+     "nodes": "pin_1..pin_2",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -1.47,
+       -2.5,
+       -0.0
+      ],
+      [
+       1.07,
+       -2.5,
+       -0.0
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.54
+    }
+   ]
+  },
+  {
+   "path": "vendor/vishay_tcrt5000",
+   "name": "Cảm biến phản xạ hồng ngoại TCRT5000",
+   "group": "Cảm biến",
+   "source": "step.parts: vishay_tcrt5000 — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "10.2 × 7.1 × 10.5 mm",
+   "note": "LED IR + phototransistor — cùng nguyên lý cảm biến chống rơi (cliff) của robot hút bụi.",
+   "nodes": [
+    "sensor_tcrt5000",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 4,
+     "nodes": "pin_1..pin_4",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -2.755,
+       -3.5,
+       -1.27
+      ],
+      [
+       2.745,
+       -3.5,
+       -1.27
+      ],
+      [
+       -2.755,
+       -3.5,
+       1.27
+      ],
+      [
+       2.745,
+       -3.5,
+       1.27
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 5.5
+    }
+   ]
+  },
+  {
+   "path": "vendor/everlight_itr8307",
+   "name": "Cảm biến phản xạ ITR8307 (mini)",
+   "group": "Cảm biến",
+   "source": "step.parts: everlight_itr8307 — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "3.2 × 6.7 × 1.4 mm",
+   "note": "Loại nhỏ hay gặp trong cảm biến cliff/encoder của robot thương mại.",
+   "nodes": [
+    "sensor_itr8307"
+   ]
+  },
+  {
+   "path": "vendor/sharp_gp2y0a41sk0f",
+   "name": "Cảm biến khoảng cách IR Sharp GP2Y0A41SK0F (4–30 cm)",
+   "group": "Cảm biến",
+   "source": "step.parts: sharp_gp2y0a41sk0f — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "44.5 × 18.9 × 13.5 mm",
+   "note": "Tham khảo cho cảm biến tường/vật cản.",
+   "nodes": [
+    "sensor_gp2y0a41"
+   ]
+  },
+  {
+   "path": "vendor/adafruit_817_micro_switch_zippy",
+   "name": "Công tắc hành trình (microswitch) ZIPPY — bumper / nhấc bánh",
+   "group": "Cảm biến",
+   "source": "step.parts: adafruit_817_micro_switch_zippy — gốc: Adafruit_CAD_Parts (MIT)",
+   "dims": "37.8 × 22.1 × 10.3 mm",
+   "note": "Công tắc snap-action (nút đẩy cạnh), kiểu dùng cho bumper và công tắc nhấc bánh. 2 cực hàn: pin_1, pin_2.",
+   "nodes": [
+    "body",
+    "btn_plunger",
+    "pin_1",
+    "pin_2"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 2,
+     "nodes": "pin_1..pin_2",
+     "axis": [
+      1,
+      0,
+      0
+     ],
+     "positions": [
+      [
+       18.9,
+       5.15,
+       -2.35
+      ],
+      [
+       18.9,
+       5.15,
+       3.65
+      ]
+     ],
+     "pitch_mm": 6.0
+    },
+    {
+     "node": "btn_plunger",
+     "pos": [
+      0.6,
+      5.15,
+      9.45
+     ],
+     "top": [
+      0.6,
+      7.5,
+      9.45
+     ],
+     "type": "button",
+     "travel_mm": 0.6,
+     "axis": [
+      0,
+      0,
+      -1
+     ]
+    }
+   ]
+  },
+  {
+   "path": "vendor/crystal_hc49_4h_vertical",
+   "name": "Thạch anh 20 MHz HC-49/S (thấp)",
+   "group": "Thụ động",
+   "source": "step.parts: crystal_hc49_4h_vertical — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "11 × 4.7 × 7 mm",
+   "note": "Loại icdayroi bán ('thach-anh-20mhz-hc49-dip'). Bước chân 4,88 mm.",
+   "nodes": [
+    "crystal_hc49s",
+    "pin_1",
+    "pin_2"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 2,
+     "nodes": "pin_1..pin_2",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -2.44,
+       -2.9,
+       -0.0
+      ],
+      [
+       2.44,
+       -2.9,
+       -0.0
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 4.88
+    }
+   ]
+  },
+  {
+   "path": "vendor/crystal_hc49_u_vertical",
+   "name": "Thạch anh HC-49/U (cao)",
+   "group": "Thụ động",
+   "source": "step.parts: crystal_hc49_u_vertical — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "10.9 × 4.7 × 16 mm",
+   "nodes": [
+    "crystal_hc49u",
+    "pin_1",
+    "pin_2"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 2,
+     "nodes": "pin_1..pin_2",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -2.44,
+       -2.9,
+       -0.0
+      ],
+      [
+       2.44,
+       -2.9,
+       -0.0
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 4.88
+    }
+   ]
+  },
+  {
+   "path": "vendor/cp_radial_d10_0mm_p5_00mm",
+   "name": "Tụ hoá 1000 µF/25 V — Ø10 mm, chân 5 mm",
+   "group": "Thụ động",
+   "source": "step.parts: cp_radial_d10_0mm_p5_00mm — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "10 × 10 × 12 mm",
+   "note": "pin_1 = cực (+). Đặt sát đầu nguồn mỗi DRV8871. Mẫu KiCad cao 12,5 mm; tụ 1000 µF/25 V thực tế thường Ø10×20 mm.",
+   "nodes": [
+    "cap_elec_d10",
+    "pin_1",
+    "pin_2"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 2,
+     "nodes": "pin_1..pin_2",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -1.4,
+       -2.0,
+       -0.0
+      ],
+      [
+       3.6,
+       -1.9,
+       -0.0
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 5.0
+    }
+   ]
+  },
+  {
+   "path": "vendor/cp_radial_d6_3mm_p2_50mm",
+   "name": "Tụ hoá 100 µF — Ø6,3 mm",
+   "group": "Thụ động",
+   "source": "step.parts: cp_radial_d6_3mm_p2_50mm — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "6.3 × 6.3 × 8.3 mm",
+   "note": "pin_1 = (+).",
+   "nodes": [
+    "cap_elec_d6",
+    "pin_1",
+    "pin_2"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 2,
+     "nodes": "pin_1..pin_2",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -0.557,
+       -2.0,
+       -0.0
+      ],
+      [
+       1.943,
+       -1.9,
+       -0.0
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.5
+    }
+   ]
+  },
+  {
+   "path": "vendor/cp_radial_d5_0mm_p2_00mm",
+   "name": "Tụ hoá 10 µF — Ø5 mm",
+   "group": "Thụ động",
+   "source": "step.parts: cp_radial_d5_0mm_p2_00mm — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "5 × 5 × 7 mm",
+   "note": "pin_1 = (+).",
+   "nodes": [
+    "cap_elec_d5",
+    "pin_1",
+    "pin_2"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 2,
+     "nodes": "pin_1..pin_2",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -0.475,
+       -2.0,
+       0.0
+      ],
+      [
+       1.525,
+       -1.9,
+       0.0
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.0
+    }
+   ]
+  },
+  {
+   "path": "vendor/c_disc_d5_0mm_w2_5mm_p5_00mm",
+   "name": "Tụ gốm 100 nF (104) — chân 5 mm",
+   "group": "Thụ động",
+   "source": "step.parts: c_disc_d5_0mm_w2_5mm_p5_00mm — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "5.5 × 2.5 × 7.1 mm",
+   "note": "Tụ lọc nguồn sát chân VDD của PIC và hai đầu động cơ.",
+   "nodes": [
+    "cap_ceramic_104",
+    "pin_1",
+    "pin_2"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 2,
+     "nodes": "pin_1..pin_2",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -2.5,
+       -2.0,
+       -0.0
+      ],
+      [
+       2.5,
+       -2.0,
+       -0.0
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 5.0
+    }
+   ]
+  },
+  {
+   "path": "vendor/c_disc_d3_0mm_w1_6mm_p2_50mm",
+   "name": "Tụ gốm 22 pF — chân 2,5 mm (cho thạch anh)",
+   "group": "Thụ động",
+   "source": "step.parts: c_disc_d3_0mm_w1_6mm_p2_50mm — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "3 × 1.6 × 5.1 mm",
+   "nodes": [
+    "cap_ceramic_22p",
+    "pin_1",
+    "pin_2"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 2,
+     "nodes": "pin_1..pin_2",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -1.25,
+       -2.0,
+       -0.0
+      ],
+      [
+       1.25,
+       -2.0,
+       -0.0
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.5
+    }
+   ]
+  },
+  {
+   "path": "vendor/r_axial_din0207_l6_3mm_d2_5mm_p10_16mm_horizontal",
+   "name": "Điện trở 1/4 W (DIN0207) — nằm, bước 10,16 mm",
+   "group": "Thụ động",
+   "source": "step.parts: r_axial_din0207_l6_3mm_d2_5mm_p10_16mm_horizontal — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "10.8 × 2.5 × 5.5 mm",
+   "note": "Bộ điện trở 600 con; phân áp pin 33k/10k, kéo lên 10k…",
+   "nodes": [
+    "resistor",
+    "pin_1",
+    "pin_2"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 2,
+     "nodes": "pin_1..pin_2",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -5.08,
+       -3.0,
+       -0.0
+      ],
+      [
+       5.08,
+       -3.0,
+       -0.0
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 10.16
+    }
+   ]
+  },
+  {
+   "path": "vendor/r_axial_din0207_l6_3mm_d2_5mm_p2_54mm_vertical",
+   "name": "Điện trở 1/4 W — đứng, bước 2,54 mm",
+   "group": "Thụ động",
+   "source": "step.parts: r_axial_din0207_l6_3mm_d2_5mm_p2_54mm_vertical — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "4.1 × 2.5 × 12.5 mm",
+   "nodes": [
+    "resistor",
+    "pin_1",
+    "pin_2"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 2,
+     "nodes": "pin_1..pin_2",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -0.793,
+       -3.0,
+       -0.0
+      ],
+      [
+       1.747,
+       -3.0,
+       -0.0
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.54
+    }
+   ]
+  },
+  {
+   "path": "vendor/potentiometer_bourns_3296w_vertical",
+   "name": "Biến trở tinh chỉnh đa vòng 3296W (chỉnh áp ra module hạ áp)",
+   "group": "Thụ động",
+   "source": "step.parts: potentiometer_bourns_3296w_vertical — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "9.5 × 4.8 × 17.1 mm",
+   "note": "25 vòng. Vít chỉnh đồng thau trên đỉnh (vặn bằng tua vít dẹt).",
+   "nodes": [
+    "body",
+    "trim_adj",
+    "pin_1",
+    "pin_2",
+    "pin_3"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 3,
+     "nodes": "pin_1..pin_3",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -2.54,
+       -6.02,
+       -0.005
+      ],
+      [
+       0.0,
+       -6.02,
+       -0.005
+      ],
+      [
+       2.54,
+       -6.02,
+       -0.005
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.54
+    },
+    {
+     "node": "trim_adj",
+     "pos": [
+      3.495,
+      10.545,
+      1.135
+     ],
+     "top": [
+      3.495,
+      11.05,
+      1.135
+     ],
+     "axis": [
+      0,
+      1,
+      0
+     ],
+     "origin": [
+      3.495,
+      10.545,
+      1.135
+     ],
+     "type": "knob",
+     "turns": 25
+    }
+   ]
+  },
+  {
+   "path": "vendor/l_bourns_srr1260",
+   "name": "Cuộn cảm công suất 12×12 mm (kiểu trên module hạ áp)",
+   "group": "Thụ động",
+   "source": "step.parts: l_bourns_srr1260 — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "12.5 × 12.5 × 6 mm",
+   "note": "SMD shielded power inductor 12×12×6 mm.",
+   "nodes": [
+    "inductor"
+   ]
+  },
+  {
+   "path": "vendor/buzzer_12x9_5rm7_6",
+   "name": "Còi chip 12×9,5 mm (buzzer 5 V, chân 7,6 mm)",
+   "group": "Thụ động",
+   "source": "step.parts: buzzer_12x9_5rm7_6 — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "12 × 12 × 12.5 mm",
+   "note": "Còi trạng thái (RD7 / GPIO6). pin_1 = (+).",
+   "nodes": [
+    "buzzer",
+    "pin_1",
+    "pin_2"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 2,
+     "nodes": "pin_1..pin_2",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -3.8,
+       -3.0,
+       -0.0
+      ],
+      [
+       3.8,
+       -3.0,
+       -0.0
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 7.6
+    }
+   ]
+  },
+  {
+   "path": "vendor/pinheader_1x40_p2_54mm_vertical",
+   "name": "Hàng rào đực 1×40 bước 2,54 mm (bẻ được)",
+   "group": "Đầu nối",
+   "source": "step.parts: pinheader_1x40_p2_54mm_vertical — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "2.5 × 101.6 × 11.5 mm",
+   "nodes": [
+    "conn_header_1x40",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4",
+    "pin_5",
+    "pin_6",
+    "pin_7",
+    "pin_8",
+    "pin_9",
+    "pin_10",
+    "pin_11",
+    "pin_12",
+    "pin_13",
+    "pin_14",
+    "pin_15",
+    "pin_16",
+    "pin_17",
+    "pin_18",
+    "pin_19",
+    "pin_20",
+    "pin_21",
+    "pin_22",
+    "pin_23",
+    "pin_24",
+    "pin_25",
+    "pin_26",
+    "pin_27",
+    "pin_28",
+    "pin_29",
+    "pin_30",
+    "pin_31",
+    "pin_32",
+    "pin_33",
+    "pin_34",
+    "pin_35",
+    "pin_36",
+    "pin_37",
+    "pin_38",
+    "pin_39",
+    "pin_40"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 40,
+     "nodes": "pin_1..pin_40",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       0.0,
+       -3.0,
+       -49.53
+      ],
+      [
+       0.0,
+       -3.0,
+       -46.99
+      ],
+      [
+       0.0,
+       -3.0,
+       -44.45
+      ],
+      [
+       0.0,
+       -3.0,
+       -41.91
+      ],
+      [
+       -0.0,
+       -3.0,
+       -39.37
+      ],
+      [
+       -0.0,
+       -3.0,
+       -36.83
+      ],
+      [
+       -0.0,
+       -3.0,
+       -34.29
+      ],
+      [
+       -0.0,
+       -3.0,
+       -31.75
+      ],
+      [
+       -0.0,
+       -3.0,
+       -29.21
+      ],
+      [
+       -0.0,
+       -3.0,
+       -26.67
+      ],
+      [
+       -0.0,
+       -3.0,
+       -24.13
+      ],
+      [
+       -0.0,
+       -3.0,
+       -21.59
+      ],
+      [
+       -0.0,
+       -3.0,
+       -19.05
+      ],
+      [
+       -0.0,
+       -3.0,
+       -16.51
+      ],
+      [
+       -0.0,
+       -3.0,
+       -13.97
+      ],
+      [
+       -0.0,
+       -3.0,
+       -11.43
+      ],
+      [
+       -0.0,
+       -3.0,
+       -8.89
+      ],
+      [
+       -0.0,
+       -3.0,
+       -6.35
+      ],
+      [
+       -0.0,
+       -3.0,
+       -3.81
+      ],
+      [
+       -0.0,
+       -3.0,
+       -1.27
+      ],
+      [
+       -0.0,
+       -3.0,
+       1.27
+      ],
+      [
+       -0.0,
+       -3.0,
+       3.81
+      ],
+      [
+       -0.0,
+       -3.0,
+       6.35
+      ],
+      [
+       -0.0,
+       -3.0,
+       8.89
+      ],
+      [
+       -0.0,
+       -3.0,
+       11.43
+      ],
+      [
+       -0.0,
+       -3.0,
+       13.97
+      ],
+      [
+       -0.0,
+       -3.0,
+       16.51
+      ],
+      [
+       -0.0,
+       -3.0,
+       19.05
+      ],
+      [
+       -0.0,
+       -3.0,
+       21.59
+      ],
+      [
+       -0.0,
+       -3.0,
+       24.13
+      ],
+      [
+       -0.0,
+       -3.0,
+       26.67
+      ],
+      [
+       -0.0,
+       -3.0,
+       29.21
+      ],
+      [
+       -0.0,
+       -3.0,
+       31.75
+      ],
+      [
+       -0.0,
+       -3.0,
+       34.29
+      ],
+      [
+       -0.0,
+       -3.0,
+       36.83
+      ],
+      [
+       -0.0,
+       -3.0,
+       39.37
+      ],
+      [
+       -0.0,
+       -3.0,
+       41.91
+      ],
+      [
+       -0.0,
+       -3.0,
+       44.45
+      ],
+      [
+       -0.0,
+       -3.0,
+       46.99
+      ],
+      [
+       -0.0,
+       -3.0,
+       49.53
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.54
+    }
+   ]
+  },
+  {
+   "path": "vendor/pinheader_1x20_p2_54mm_vertical",
+   "name": "Hàng rào đực 1×20",
+   "group": "Đầu nối",
+   "source": "step.parts: pinheader_1x20_p2_54mm_vertical — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "2.5 × 50.8 × 11.5 mm",
+   "nodes": [
+    "conn_header_1x20",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4",
+    "pin_5",
+    "pin_6",
+    "pin_7",
+    "pin_8",
+    "pin_9",
+    "pin_10",
+    "pin_11",
+    "pin_12",
+    "pin_13",
+    "pin_14",
+    "pin_15",
+    "pin_16",
+    "pin_17",
+    "pin_18",
+    "pin_19",
+    "pin_20"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 20,
+     "nodes": "pin_1..pin_20",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       0.0,
+       -3.0,
+       -24.13
+      ],
+      [
+       0.0,
+       -3.0,
+       -21.59
+      ],
+      [
+       0.0,
+       -3.0,
+       -19.05
+      ],
+      [
+       0.0,
+       -3.0,
+       -16.51
+      ],
+      [
+       -0.0,
+       -3.0,
+       -13.97
+      ],
+      [
+       -0.0,
+       -3.0,
+       -11.43
+      ],
+      [
+       -0.0,
+       -3.0,
+       -8.89
+      ],
+      [
+       -0.0,
+       -3.0,
+       -6.35
+      ],
+      [
+       -0.0,
+       -3.0,
+       -3.81
+      ],
+      [
+       -0.0,
+       -3.0,
+       -1.27
+      ],
+      [
+       -0.0,
+       -3.0,
+       1.27
+      ],
+      [
+       -0.0,
+       -3.0,
+       3.81
+      ],
+      [
+       -0.0,
+       -3.0,
+       6.35
+      ],
+      [
+       -0.0,
+       -3.0,
+       8.89
+      ],
+      [
+       -0.0,
+       -3.0,
+       11.43
+      ],
+      [
+       -0.0,
+       -3.0,
+       13.97
+      ],
+      [
+       -0.0,
+       -3.0,
+       16.51
+      ],
+      [
+       -0.0,
+       -3.0,
+       19.05
+      ],
+      [
+       -0.0,
+       -3.0,
+       21.59
+      ],
+      [
+       -0.0,
+       -3.0,
+       24.13
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.54
+    }
+   ]
+  },
+  {
+   "path": "vendor/pinheader_1x06_p2_54mm_vertical",
+   "name": "Header ICSP 6 chân (chuẩn PICkit: MCLR, VDD, GND, PGD, PGC, NC)",
+   "group": "Đầu nối",
+   "source": "step.parts: pinheader_1x06_p2_54mm_vertical — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "2.5 × 15.2 × 11.5 mm",
+   "note": "Cắm PICkit 3. pin_1 = MCLR.",
+   "nodes": [
+    "conn_icsp",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4",
+    "pin_5",
+    "pin_6"
+   ],
+   "interact": [
+    {
+     "node": "conn_icsp",
+     "type": "connector",
+     "mates": "pickit3-6p"
+    },
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 6,
+     "nodes": "pin_1..pin_6",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       0.0,
+       -3.0,
+       -6.35
+      ],
+      [
+       0.0,
+       -3.0,
+       -3.81
+      ],
+      [
+       0.0,
+       -3.0,
+       -1.27
+      ],
+      [
+       0.0,
+       -3.0,
+       1.27
+      ],
+      [
+       -0.0,
+       -3.0,
+       3.81
+      ],
+      [
+       -0.0,
+       -3.0,
+       6.35
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.54
+    }
+   ]
+  },
+  {
+   "path": "vendor/pinheader_1x06_p2_54mm_horizontal",
+   "name": "Header 6 chân cong 90°",
+   "group": "Đầu nối",
+   "source": "step.parts: pinheader_1x06_p2_54mm_horizontal — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "10.4 × 15.2 × 5.5 mm",
+   "nodes": [
+    "conn_header_1x06_ra",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4",
+    "pin_5",
+    "pin_6"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 6,
+     "nodes": "pin_1..pin_6",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -4.86,
+       -3.0,
+       -6.35
+      ],
+      [
+       -4.86,
+       -3.0,
+       -3.81
+      ],
+      [
+       -4.86,
+       -3.0,
+       -1.27
+      ],
+      [
+       -4.86,
+       -3.0,
+       1.27
+      ],
+      [
+       -4.86,
+       -3.0,
+       3.81
+      ],
+      [
+       -4.86,
+       -3.0,
+       6.35
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.54
+    }
+   ]
+  },
+  {
+   "path": "vendor/pinheader_1x04_p2_54mm_vertical",
+   "name": "Header 4 chân (I2C: VCC GND SCL SDA)",
+   "group": "Đầu nối",
+   "source": "step.parts: pinheader_1x04_p2_54mm_vertical — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "2.5 × 10.2 × 11.5 mm",
+   "nodes": [
+    "conn_header_1x04",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 4,
+     "nodes": "pin_1..pin_4",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       0.0,
+       -3.0,
+       -3.81
+      ],
+      [
+       0.0,
+       -3.0,
+       -1.27
+      ],
+      [
+       0.0,
+       -3.0,
+       1.27
+      ],
+      [
+       0.0,
+       -3.0,
+       3.81
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.54
+    }
+   ]
+  },
+  {
+   "path": "vendor/pinheader_1x03_p2_54mm_vertical",
+   "name": "Header 3 chân (encoder / servo)",
+   "group": "Đầu nối",
+   "source": "step.parts: pinheader_1x03_p2_54mm_vertical — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "2.5 × 7.6 × 11.5 mm",
+   "nodes": [
+    "conn_header_1x03",
+    "pin_1",
+    "pin_2",
+    "pin_3"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 3,
+     "nodes": "pin_1..pin_3",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       0.0,
+       -3.0,
+       -2.54
+      ],
+      [
+       0.0,
+       -3.0,
+       -0.0
+      ],
+      [
+       0.0,
+       -3.0,
+       2.54
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.54
+    }
+   ]
+  },
+  {
+   "path": "vendor/pinheader_1x02_p2_54mm_vertical",
+   "name": "Header 2 chân",
+   "group": "Đầu nối",
+   "source": "step.parts: pinheader_1x02_p2_54mm_vertical — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "2.5 × 5.1 × 11.5 mm",
+   "nodes": [
+    "conn_header_1x02",
+    "pin_1",
+    "pin_2"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 2,
+     "nodes": "pin_1..pin_2",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       0.0,
+       -3.0,
+       -1.27
+      ],
+      [
+       0.0,
+       -3.0,
+       1.27
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.54
+    }
+   ]
+  },
+  {
+   "path": "vendor/pinheader_2x03_p2_54mm_vertical",
+   "name": "Header 2×3",
+   "group": "Đầu nối",
+   "source": "step.parts: pinheader_2x03_p2_54mm_vertical — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "5.1 × 7.6 × 11.5 mm",
+   "nodes": [
+    "conn_header_2x03",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4",
+    "pin_5",
+    "pin_6"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 6,
+     "nodes": "pin_1..pin_6",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -1.27,
+       -3.0,
+       -2.54
+      ],
+      [
+       1.27,
+       -3.0,
+       -2.54
+      ],
+      [
+       -1.27,
+       -3.0,
+       -0.0
+      ],
+      [
+       1.27,
+       -3.0,
+       -0.0
+      ],
+      [
+       -1.27,
+       -3.0,
+       2.54
+      ],
+      [
+       1.27,
+       -3.0,
+       2.54
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.54
+    }
+   ]
+  },
+  {
+   "path": "vendor/pinsocket_1x22_p2_54mm_vertical",
+   "name": "Hàng cái 1×22 (đế cắm ESP32-S3-DevKitC-1)",
+   "group": "Đầu nối",
+   "source": "step.parts: pinsocket_1x22_p2_54mm_vertical — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "2.5 × 55.9 × 11.6 mm",
+   "note": "DevKitC-1 có 2 hàng 22 chân → dùng 2 thanh.",
+   "nodes": [
+    "socket_1x22",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4",
+    "pin_5",
+    "pin_6",
+    "pin_7",
+    "pin_8",
+    "pin_9",
+    "pin_10",
+    "pin_11",
+    "pin_12",
+    "pin_13",
+    "pin_14",
+    "pin_15",
+    "pin_16",
+    "pin_17",
+    "pin_18",
+    "pin_19",
+    "pin_20",
+    "pin_21",
+    "pin_22"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 22,
+     "nodes": "pin_1..pin_22",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       0.0,
+       -3.1,
+       -26.67
+      ],
+      [
+       -0.0,
+       -3.1,
+       -24.13
+      ],
+      [
+       -0.0,
+       -3.1,
+       -21.59
+      ],
+      [
+       -0.0,
+       -3.1,
+       -19.05
+      ],
+      [
+       -0.0,
+       -3.1,
+       -16.51
+      ],
+      [
+       0.0,
+       -3.1,
+       -13.97
+      ],
+      [
+       0.0,
+       -3.1,
+       -11.43
+      ],
+      [
+       -0.0,
+       -3.1,
+       -8.89
+      ],
+      [
+       0.0,
+       -3.1,
+       -6.35
+      ],
+      [
+       0.0,
+       -3.1,
+       -3.81
+      ],
+      [
+       0.0,
+       -3.1,
+       -1.27
+      ],
+      [
+       0.0,
+       -3.1,
+       1.27
+      ],
+      [
+       0.0,
+       -3.1,
+       3.81
+      ],
+      [
+       0.0,
+       -3.1,
+       6.35
+      ],
+      [
+       -0.0,
+       -3.1,
+       8.89
+      ],
+      [
+       -0.0,
+       -3.1,
+       11.43
+      ],
+      [
+       -0.0,
+       -3.1,
+       13.97
+      ],
+      [
+       -0.0,
+       -3.1,
+       16.51
+      ],
+      [
+       -0.0,
+       -3.1,
+       19.05
+      ],
+      [
+       -0.0,
+       -3.1,
+       21.59
+      ],
+      [
+       -0.0,
+       -3.1,
+       24.13
+      ],
+      [
+       -0.0,
+       -3.1,
+       26.67
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.54
+    }
+   ]
+  },
+  {
+   "path": "vendor/pinsocket_1x20_p2_54mm_vertical",
+   "name": "Hàng cái 1×20",
+   "group": "Đầu nối",
+   "source": "step.parts: pinsocket_1x20_p2_54mm_vertical — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "2.5 × 50.8 × 11.6 mm",
+   "nodes": [
+    "socket_1x20",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4",
+    "pin_5",
+    "pin_6",
+    "pin_7",
+    "pin_8",
+    "pin_9",
+    "pin_10",
+    "pin_11",
+    "pin_12",
+    "pin_13",
+    "pin_14",
+    "pin_15",
+    "pin_16",
+    "pin_17",
+    "pin_18",
+    "pin_19",
+    "pin_20"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 20,
+     "nodes": "pin_1..pin_20",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       0.0,
+       -3.1,
+       -24.13
+      ],
+      [
+       -0.0,
+       -3.1,
+       -21.59
+      ],
+      [
+       -0.0,
+       -3.1,
+       -19.05
+      ],
+      [
+       -0.0,
+       -3.1,
+       -16.51
+      ],
+      [
+       -0.0,
+       -3.1,
+       -13.97
+      ],
+      [
+       0.0,
+       -3.1,
+       -11.43
+      ],
+      [
+       0.0,
+       -3.1,
+       -8.89
+      ],
+      [
+       -0.0,
+       -3.1,
+       -6.35
+      ],
+      [
+       0.0,
+       -3.1,
+       -3.81
+      ],
+      [
+       0.0,
+       -3.1,
+       -1.27
+      ],
+      [
+       0.0,
+       -3.1,
+       1.27
+      ],
+      [
+       0.0,
+       -3.1,
+       3.81
+      ],
+      [
+       0.0,
+       -3.1,
+       6.35
+      ],
+      [
+       0.0,
+       -3.1,
+       8.89
+      ],
+      [
+       -0.0,
+       -3.1,
+       11.43
+      ],
+      [
+       -0.0,
+       -3.1,
+       13.97
+      ],
+      [
+       -0.0,
+       -3.1,
+       16.51
+      ],
+      [
+       -0.0,
+       -3.1,
+       19.05
+      ],
+      [
+       -0.0,
+       -3.1,
+       21.59
+      ],
+      [
+       -0.0,
+       -3.1,
+       24.13
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.54
+    }
+   ]
+  },
+  {
+   "path": "vendor/pinsocket_1x08_p2_54mm_vertical",
+   "name": "Hàng cái 1×8",
+   "group": "Đầu nối",
+   "source": "step.parts: pinsocket_1x08_p2_54mm_vertical — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "2.5 × 20.3 × 11.6 mm",
+   "nodes": [
+    "socket_1x08",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4",
+    "pin_5",
+    "pin_6",
+    "pin_7",
+    "pin_8"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 8,
+     "nodes": "pin_1..pin_8",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       0.0,
+       -3.1,
+       -8.89
+      ],
+      [
+       -0.0,
+       -3.1,
+       -6.35
+      ],
+      [
+       -0.0,
+       -3.1,
+       -3.81
+      ],
+      [
+       -0.0,
+       -3.1,
+       -1.27
+      ],
+      [
+       -0.0,
+       -3.1,
+       1.27
+      ],
+      [
+       0.0,
+       -3.1,
+       3.81
+      ],
+      [
+       0.0,
+       -3.1,
+       6.35
+      ],
+      [
+       -0.0,
+       -3.1,
+       8.89
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.54
+    }
+   ]
+  },
+  {
+   "path": "vendor/pinsocket_1x06_p2_54mm_vertical",
+   "name": "Hàng cái 1×6",
+   "group": "Đầu nối",
+   "source": "step.parts: pinsocket_1x06_p2_54mm_vertical — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "2.5 × 15.2 × 11.6 mm",
+   "nodes": [
+    "socket_1x06",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4",
+    "pin_5",
+    "pin_6"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 6,
+     "nodes": "pin_1..pin_6",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       0.0,
+       -3.1,
+       -6.35
+      ],
+      [
+       -0.0,
+       -3.1,
+       -3.81
+      ],
+      [
+       -0.0,
+       -3.1,
+       -1.27
+      ],
+      [
+       -0.0,
+       -3.1,
+       1.27
+      ],
+      [
+       -0.0,
+       -3.1,
+       3.81
+      ],
+      [
+       0.0,
+       -3.1,
+       6.35
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.54
+    }
+   ]
+  },
+  {
+   "path": "vendor/pinsocket_1x04_p2_54mm_vertical",
+   "name": "Hàng cái 1×4 (cắm GY-521 / BSS138)",
+   "group": "Đầu nối",
+   "source": "step.parts: pinsocket_1x04_p2_54mm_vertical — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "2.5 × 10.2 × 11.6 mm",
+   "nodes": [
+    "socket_1x04",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 4,
+     "nodes": "pin_1..pin_4",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       0.0,
+       -3.1,
+       -3.81
+      ],
+      [
+       -0.0,
+       -3.1,
+       -1.27
+      ],
+      [
+       -0.0,
+       -3.1,
+       1.27
+      ],
+      [
+       -0.0,
+       -3.1,
+       3.81
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.54
+    }
+   ]
+  },
+  {
+   "path": "vendor/idc_header_2x05_p2_54mm_vertical",
+   "name": "Đầu IDC box header 2×5",
+   "group": "Đầu nối",
+   "source": "step.parts: idc_header_2x05_p2_54mm_vertical — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "9.1 × 20.4 × 12.1 mm",
+   "nodes": [
+    "conn_idc_2x05",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4",
+    "pin_5",
+    "pin_6",
+    "pin_7",
+    "pin_8",
+    "pin_9",
+    "pin_10"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 10,
+     "nodes": "pin_1..pin_10",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -1.395,
+       -3.0,
+       -5.08
+      ],
+      [
+       1.145,
+       -3.0,
+       -5.08
+      ],
+      [
+       -1.395,
+       -3.0,
+       -2.54
+      ],
+      [
+       1.145,
+       -3.0,
+       -2.54
+      ],
+      [
+       -1.395,
+       -3.0,
+       -0.0
+      ],
+      [
+       1.145,
+       -3.0,
+       -0.0
+      ],
+      [
+       -1.395,
+       -3.0,
+       2.54
+      ],
+      [
+       1.145,
+       -3.0,
+       2.54
+      ],
+      [
+       -1.395,
+       -3.0,
+       5.08
+      ],
+      [
+       1.145,
+       -3.0,
+       5.08
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.54
+    }
+   ]
+  },
+  {
+   "path": "vendor/jst_xh_b2b_xh_a_1x02_p2_50mm_vertical",
+   "name": "Đầu JST XH 2 chân (B2B-XH-A, bước 2,5 mm)",
+   "group": "Đầu nối",
+   "source": "step.parts: jst_xh_b2b_xh_a_1x02_p2_50mm_vertical — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "7.4 × 5.8 × 10.4 mm",
+   "note": "Đầu cắm dây động cơ / encoder / cảm biến của robot.",
+   "nodes": [
+    "conn_jst_xh_2p",
+    "pin_1",
+    "pin_2"
+   ],
+   "interact": [
+    {
+     "node": "conn_jst_xh_2p",
+     "type": "connector",
+     "mates": "jst-xh-2p-housing",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "travel_mm": 6.0
+    },
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 2,
+     "nodes": "pin_1..pin_2",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -1.25,
+       -3.4,
+       -0.675
+      ],
+      [
+       1.25,
+       -3.4,
+       -0.675
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.5
+    }
+   ]
+  },
+  {
+   "path": "vendor/jst_xh_b3b_xh_a_1x03_p2_50mm_vertical",
+   "name": "Đầu JST XH 3 chân (B3B-XH-A, bước 2,5 mm)",
+   "group": "Đầu nối",
+   "source": "step.parts: jst_xh_b3b_xh_a_1x03_p2_50mm_vertical — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "9.9 × 5.8 × 10.4 mm",
+   "note": "Đầu cắm dây động cơ / encoder / cảm biến của robot.",
+   "nodes": [
+    "conn_jst_xh_3p",
+    "pin_1",
+    "pin_2",
+    "pin_3"
+   ],
+   "interact": [
+    {
+     "node": "conn_jst_xh_3p",
+     "type": "connector",
+     "mates": "jst-xh-3p-housing",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "travel_mm": 6.0
+    },
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 3,
+     "nodes": "pin_1..pin_3",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -2.5,
+       -3.4,
+       -0.675
+      ],
+      [
+       0.0,
+       -3.4,
+       -0.525
+      ],
+      [
+       2.5,
+       -3.4,
+       -0.675
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.5
+    }
+   ]
+  },
+  {
+   "path": "vendor/jst_xh_b4b_xh_a_1x04_p2_50mm_vertical",
+   "name": "Đầu JST XH 4 chân (B4B-XH-A, bước 2,5 mm)",
+   "group": "Đầu nối",
+   "source": "step.parts: jst_xh_b4b_xh_a_1x04_p2_50mm_vertical — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "12.4 × 5.8 × 10.4 mm",
+   "note": "Đầu cắm dây động cơ / encoder / cảm biến của robot.",
+   "nodes": [
+    "conn_jst_xh_4p",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4"
+   ],
+   "interact": [
+    {
+     "node": "conn_jst_xh_4p",
+     "type": "connector",
+     "mates": "jst-xh-4p-housing",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "travel_mm": 6.0
+    },
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 4,
+     "nodes": "pin_1..pin_4",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -3.75,
+       -3.4,
+       -0.675
+      ],
+      [
+       -1.25,
+       -3.4,
+       -0.525
+      ],
+      [
+       1.25,
+       -3.4,
+       -0.525
+      ],
+      [
+       3.75,
+       -3.4,
+       -0.675
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.5
+    }
+   ]
+  },
+  {
+   "path": "vendor/jst_xh_b5b_xh_a_1x05_p2_50mm_vertical",
+   "name": "Đầu JST XH 5 chân (B5B-XH-A, bước 2,5 mm)",
+   "group": "Đầu nối",
+   "source": "step.parts: jst_xh_b5b_xh_a_1x05_p2_50mm_vertical — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "14.9 × 5.8 × 10.4 mm",
+   "note": "Đầu cắm dây động cơ / encoder / cảm biến của robot.",
+   "nodes": [
+    "conn_jst_xh_5p",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4",
+    "pin_5"
+   ],
+   "interact": [
+    {
+     "node": "conn_jst_xh_5p",
+     "type": "connector",
+     "mates": "jst-xh-5p-housing",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "travel_mm": 6.0
+    },
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 5,
+     "nodes": "pin_1..pin_5",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -5.0,
+       -3.4,
+       -0.675
+      ],
+      [
+       -2.5,
+       -3.4,
+       -0.525
+      ],
+      [
+       0.0,
+       -3.4,
+       -0.525
+      ],
+      [
+       2.5,
+       -3.4,
+       -0.525
+      ],
+      [
+       5.0,
+       -3.4,
+       -0.675
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.5
+    }
+   ]
+  },
+  {
+   "path": "vendor/jst_xh_b6b_xh_a_1x06_p2_50mm_vertical",
+   "name": "Đầu JST XH 6 chân (B6B-XH-A, bước 2,5 mm)",
+   "group": "Đầu nối",
+   "source": "step.parts: jst_xh_b6b_xh_a_1x06_p2_50mm_vertical — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "17.4 × 5.8 × 10.4 mm",
+   "note": "Đầu cắm dây động cơ / encoder / cảm biến của robot.",
+   "nodes": [
+    "conn_jst_xh_6p",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4",
+    "pin_5",
+    "pin_6"
+   ],
+   "interact": [
+    {
+     "node": "conn_jst_xh_6p",
+     "type": "connector",
+     "mates": "jst-xh-6p-housing",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "travel_mm": 6.0
+    },
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 6,
+     "nodes": "pin_1..pin_6",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -6.25,
+       -3.4,
+       -0.675
+      ],
+      [
+       -3.75,
+       -3.4,
+       -0.525
+      ],
+      [
+       -1.25,
+       -3.4,
+       -0.525
+      ],
+      [
+       1.25,
+       -3.4,
+       -0.525
+      ],
+      [
+       3.75,
+       -3.4,
+       -0.525
+      ],
+      [
+       6.25,
+       -3.4,
+       -0.675
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.5
+    }
+   ]
+  },
+  {
+   "path": "vendor/jst_ph_b2b_ph_k_1x02_p2_00mm_vertical",
+   "name": "Đầu JST PH 2 chân (bước 2,0 mm)",
+   "group": "Đầu nối",
+   "source": "step.parts: jst_ph_b2b_ph_k_1x02_p2_00mm_vertical — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "5.9 × 4.5 × 9.4 mm",
+   "note": "Hay gặp ở pin và cảm biến trong robot hút bụi.",
+   "nodes": [
+    "conn_jst_ph_2p",
+    "pin_1",
+    "pin_2"
+   ],
+   "interact": [
+    {
+     "node": "conn_jst_ph_2p",
+     "type": "connector",
+     "mates": "jst-ph-2p-housing",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "travel_mm": 4.5
+    },
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 2,
+     "nodes": "pin_1..pin_2",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -1.0,
+       -3.4,
+       -0.675
+      ],
+      [
+       1.0,
+       -3.4,
+       -0.675
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.0
+    }
+   ]
+  },
+  {
+   "path": "vendor/jst_ph_b3b_ph_k_1x03_p2_00mm_vertical",
+   "name": "Đầu JST PH 3 chân (bước 2,0 mm)",
+   "group": "Đầu nối",
+   "source": "step.parts: jst_ph_b3b_ph_k_1x03_p2_00mm_vertical — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "7.9 × 4.5 × 9.4 mm",
+   "note": "Hay gặp ở pin và cảm biến trong robot hút bụi.",
+   "nodes": [
+    "conn_jst_ph_3p",
+    "pin_1",
+    "pin_2",
+    "pin_3"
+   ],
+   "interact": [
+    {
+     "node": "conn_jst_ph_3p",
+     "type": "connector",
+     "mates": "jst-ph-3p-housing",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "travel_mm": 4.5
+    },
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 3,
+     "nodes": "pin_1..pin_3",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -2.0,
+       -3.4,
+       -0.675
+      ],
+      [
+       -0.0,
+       -3.4,
+       -0.525
+      ],
+      [
+       2.0,
+       -3.4,
+       -0.675
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.01
+    }
+   ]
+  },
+  {
+   "path": "vendor/jst_ph_b4b_ph_k_1x04_p2_00mm_vertical",
+   "name": "Đầu JST PH 4 chân (bước 2,0 mm)",
+   "group": "Đầu nối",
+   "source": "step.parts: jst_ph_b4b_ph_k_1x04_p2_00mm_vertical — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "9.9 × 4.5 × 9.4 mm",
+   "note": "Hay gặp ở pin và cảm biến trong robot hút bụi.",
+   "nodes": [
+    "conn_jst_ph_4p",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4"
+   ],
+   "interact": [
+    {
+     "node": "conn_jst_ph_4p",
+     "type": "connector",
+     "mates": "jst-ph-4p-housing",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "travel_mm": 4.5
+    },
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 4,
+     "nodes": "pin_1..pin_4",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -3.0,
+       -3.4,
+       -0.675
+      ],
+      [
+       -1.0,
+       -3.4,
+       -0.525
+      ],
+      [
+       1.0,
+       -3.4,
+       -0.525
+      ],
+      [
+       3.0,
+       -3.4,
+       -0.675
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.0
+    }
+   ]
+  },
+  {
+   "path": "vendor/amass_xt60_f_1x02_p7_2mm_vertical",
+   "name": "Đầu XT60 cái (hàn PCB)",
+   "group": "Đầu nối",
+   "source": "step.parts: amass_xt60_f_1x02_p7_2mm_vertical — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "15.9 × 8.1 × 21.2 mm",
+   "note": "Đầu nguồn pin 4S. Nhựa vàng PA, chân đồng mạ vàng.",
+   "nodes": [
+    "conn_xt60f",
+    "pin_1",
+    "pin_2"
+   ],
+   "interact": [
+    {
+     "node": "conn_xt60f",
+     "type": "connector",
+     "mates": "xt60-m",
+     "axis": [
+      0,
+      1,
+      0
+     ],
+     "travel_mm": 8.0
+    },
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 2,
+     "nodes": "pin_1..pin_2",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -3.6,
+       -4.5,
+       0.0
+      ],
+      [
+       3.6,
+       -4.5,
+       -0.0
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 7.2
+    }
+   ]
+  },
+  {
+   "path": "vendor/amass_xt60_m_1x02_p7_2mm_vertical",
+   "name": "Đầu XT60 đực (hàn PCB)",
+   "group": "Đầu nối",
+   "source": "step.parts: amass_xt60_m_1x02_p7_2mm_vertical — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "15.9 × 8.1 × 20.5 mm",
+   "nodes": [
+    "conn_xt60m",
+    "pin_1",
+    "pin_2"
+   ],
+   "interact": [
+    {
+     "node": "conn_xt60m",
+     "type": "connector",
+     "mates": "xt60-f",
+     "axis": [
+      0,
+      1,
+      0
+     ],
+     "travel_mm": 8.0
+    },
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 2,
+     "nodes": "pin_1..pin_2",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -3.6,
+       -4.5,
+       -0.0
+      ],
+      [
+       3.6,
+       -4.5,
+       -0.0
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 7.2
+    }
+   ]
+  },
+  {
+   "path": "vendor/terminalblock_phoenix_mkds_1_5_2_5_08_1x02_p5_08mm_horizontal",
+   "name": "Cầu đấu (domino) 2 cực bước 5,08 mm",
+   "group": "Đầu nối",
+   "source": "step.parts: terminalblock_phoenix_mkds_1_5_2_5_08_1x02_p5_08mm_horizontal — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "10.9 × 9.8 × 17.3 mm",
+   "note": "Tương đương KF301-2P.",
+   "nodes": [
+    "conn_terminal_2p",
+    "pin_1",
+    "pin_2"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 2,
+     "nodes": "pin_1..pin_2",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -2.17,
+       -3.5,
+       0.3
+      ],
+      [
+       2.91,
+       -3.5,
+       0.3
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 5.08
+    },
+    {
+     "node": "conn_terminal_2p",
+     "type": "screw_terminal",
+     "index": 1,
+     "pos": [
+      -2.17,
+      13.8,
+      0.3
+     ],
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "approx": true
+    },
+    {
+     "node": "conn_terminal_2p",
+     "type": "screw_terminal",
+     "index": 2,
+     "pos": [
+      2.91,
+      13.8,
+      0.3
+     ],
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "approx": true
+    }
+   ]
+  },
+  {
+   "path": "vendor/terminalblock_phoenix_mkds_1_5_3_5_08_1x03_p5_08mm_horizontal",
+   "name": "Cầu đấu (domino) 3 cực bước 5,08 mm",
+   "group": "Đầu nối",
+   "source": "step.parts: terminalblock_phoenix_mkds_1_5_3_5_08_1x03_p5_08mm_horizontal — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "16 × 9.8 × 17.3 mm",
+   "note": "Tương đương KF301-3P.",
+   "nodes": [
+    "conn_terminal_3p",
+    "pin_1",
+    "pin_2",
+    "pin_3"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 3,
+     "nodes": "pin_1..pin_3",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -4.71,
+       -3.5,
+       0.3
+      ],
+      [
+       0.37,
+       -3.5,
+       0.3
+      ],
+      [
+       5.45,
+       -3.5,
+       0.3
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 5.08
+    },
+    {
+     "node": "conn_terminal_3p",
+     "type": "screw_terminal",
+     "index": 1,
+     "pos": [
+      -4.71,
+      13.8,
+      0.3
+     ],
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "approx": true
+    },
+    {
+     "node": "conn_terminal_3p",
+     "type": "screw_terminal",
+     "index": 2,
+     "pos": [
+      0.37,
+      13.8,
+      0.3
+     ],
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "approx": true
+    },
+    {
+     "node": "conn_terminal_3p",
+     "type": "screw_terminal",
+     "index": 3,
+     "pos": [
+      5.45,
+      13.8,
+      0.3
+     ],
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "approx": true
+    }
+   ]
+  },
+  {
+   "path": "vendor/barreljack_horizontal",
+   "name": "Jack nguồn DC 5,5×2,1 mm (DC-005)",
+   "group": "Đầu nối",
+   "source": "step.parts: barreljack_horizontal — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "14.2 × 9.3 × 14.6 mm",
+   "nodes": [
+    "conn_dc_jack",
+    "pin_1",
+    "pin_2",
+    "pin_3"
+   ],
+   "interact": [
+    {
+     "node": "conn_dc_jack",
+     "type": "connector",
+     "mates": "dc-plug-5.5x2.1"
+    },
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 3,
+     "nodes": "pin_1..pin_3",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       0.7,
+       -3.9,
+       -0.15
+      ],
+      [
+       3.7,
+       -3.4,
+       4.55
+      ],
+      [
+       6.8,
+       -3.5,
+       -0.15
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 5.58
+    }
+   ]
+  },
+  {
+   "path": "vendor/usb_c_receptacle_gct_usb4105_xx_a_16p_topmnt_horizontal",
+   "name": "Cổng USB-C 16 chân (GCT USB4105)",
+   "group": "Đầu nối",
+   "source": "step.parts: usb_c_receptacle_gct_usb4105_xx_a_16p_topmnt_horizontal — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "8.9 × 7.8 × 4.3 mm",
+   "nodes": [
+    "conn_usbc"
+   ],
+   "interact": [
+    {
+     "node": "conn_usbc",
+     "type": "connector",
+     "mates": "usb-c-plug"
+    }
+   ]
+  },
+  {
+   "path": "vendor/usb_micro_b_molex_47346_0001",
+   "name": "Cổng micro-USB B (Molex 47346)",
+   "group": "Đầu nối",
+   "source": "step.parts: usb_micro_b_molex_47346_0001 — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "8 × 5.4 × 2.9 mm",
+   "nodes": [
+    "conn_microusb"
+   ],
+   "interact": [
+    {
+     "node": "conn_microusb",
+     "type": "connector",
+     "mates": "micro-usb-plug"
+    }
+   ]
+  },
+  {
+   "path": "vendor/sw_push_6mm",
+   "name": "Nút nhấn 6×6×4,3 mm (START / RESET)",
+   "group": "Đầu nối",
+   "source": "step.parts: sw_push_6mm — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "7.2 × 6 × 7.8 mm",
+   "note": "Nút START chế độ PIC tự chạy (RB0). 4 chân = 2 cặp nối sẵn.",
+   "nodes": [
+    "body",
+    "btn_push",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 4,
+     "nodes": "pin_1..pin_4",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -3.294,
+       -3.5,
+       -2.25
+      ],
+      [
+       3.294,
+       -3.5,
+       -2.25
+      ],
+      [
+       -3.294,
+       -3.5,
+       2.25
+      ],
+      [
+       3.294,
+       -3.5,
+       2.25
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 6.59
+    },
+    {
+     "node": "btn_push",
+     "pos": [
+      0.0,
+      3.95,
+      -0.0
+     ],
+     "top": [
+      0.0,
+      4.3,
+      -0.0
+     ],
+     "type": "button",
+     "travel_mm": 0.25,
+     "axis": [
+      0,
+      -1,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "path": "vendor/sw_push_6mm_h13mm",
+   "name": "Nút nhấn 6×6 cao 13 mm",
+   "group": "Đầu nối",
+   "source": "step.parts: sw_push_6mm_h13mm — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "7.2 × 6 × 16.5 mm",
+   "nodes": [
+    "body",
+    "btn_push",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 4,
+     "nodes": "pin_1..pin_4",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -3.294,
+       -3.5,
+       -2.25
+      ],
+      [
+       3.294,
+       -3.5,
+       -2.25
+      ],
+      [
+       -3.294,
+       -3.5,
+       2.25
+      ],
+      [
+       3.294,
+       -3.5,
+       2.25
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 6.59
+    },
+    {
+     "node": "btn_push",
+     "pos": [
+      0.0,
+      8.3,
+      -0.0
+     ],
+     "top": [
+      0.0,
+      13.0,
+      -0.0
+     ],
+     "type": "button",
+     "travel_mm": 0.25,
+     "axis": [
+      0,
+      -1,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "path": "vendor/adafruit_1119_tactile_switch_12mm_b3f_40xx",
+   "name": "Nút nhấn 12×12 Omron B3F-40xx (có nắp)",
+   "group": "Đầu nối",
+   "source": "step.parts: adafruit_1119_tactile_switch_12mm_b3f_40xx — gốc: Adafruit_CAD_Parts (MIT)",
+   "dims": "12.9 × 12 × 9 mm",
+   "nodes": [
+    "body",
+    "btn_cap",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 4,
+     "nodes": "pin_1..pin_4",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -6.163,
+       -2.958,
+       -2.5
+      ],
+      [
+       6.163,
+       -2.958,
+       -2.5
+      ],
+      [
+       -6.163,
+       -2.958,
+       2.5
+      ],
+      [
+       6.163,
+       -2.958,
+       2.5
+      ]
+     ],
+     "pitch_mm": 12.33
+    },
+    {
+     "node": "btn_cap",
+     "pos": [
+      0.0,
+      4.75,
+      -0.0
+     ],
+     "top": [
+      0.0,
+      6.0,
+      -0.0
+     ],
+     "type": "button",
+     "travel_mm": 0.3,
+     "axis": [
+      0,
+      -1,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "path": "vendor/sw_slide_spdt_straight_ck_os102011ms2q",
+   "name": "Công tắc gạt SS12D00 / OS102011 (SPDT)",
+   "group": "Đầu nối",
+   "source": "step.parts: sw_slide_spdt_straight_ck_os102011ms2q — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "8.6 × 4.3 × 11.5 mm",
+   "note": "Công tắc chọn chế độ / bật nguồn logic. pin_2..pin_4 = 3 cực (giữa = chung); pin_1, pin_5 = chân giữ vỏ.",
+   "nodes": [
+    "body",
+    "btn_slide",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4",
+    "pin_5"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 5,
+     "nodes": "pin_1..pin_5",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -4.1,
+       -2.8,
+       0.0
+      ],
+      [
+       -2.0,
+       -2.8,
+       0.0
+      ],
+      [
+       -0.0,
+       -2.8,
+       0.0
+      ],
+      [
+       2.0,
+       -2.8,
+       0.0
+      ],
+      [
+       4.1,
+       -2.8,
+       0.0
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.0
+    },
+    {
+     "node": "btn_slide",
+     "pos": [
+      -1.0,
+      5.05,
+      0.0
+     ],
+     "top": [
+      -1.0,
+      8.7,
+      0.0
+     ],
+     "type": "slider",
+     "travel_mm": 1.5,
+     "axis": [
+      1,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "path": "vendor/sw_e_switch_eg1224_spdt_angled",
+   "name": "Công tắc gạt E-Switch EG1224 (nằm ngang)",
+   "group": "Đầu nối",
+   "source": "step.parts: sw_e_switch_eg1224_spdt_angled — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "13.8 × 15.5 × 12 mm",
+   "nodes": [
+    "body",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4",
+    "pin_5",
+    "pin_6",
+    "pin_7"
+   ],
+   "interact": [
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 7,
+     "nodes": "pin_1..pin_7",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -6.0,
+       -3.5,
+       -7.5
+      ],
+      [
+       -6.0,
+       -3.5,
+       -1.5
+      ],
+      [
+       -4.0,
+       -3.5,
+       -5.75
+      ],
+      [
+       0.0,
+       -3.5,
+       -5.75
+      ],
+      [
+       4.0,
+       -3.5,
+       -5.75
+      ],
+      [
+       6.0,
+       -3.5,
+       -7.5
+      ],
+      [
+       6.0,
+       -3.5,
+       -1.5
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 2.66
+    }
+   ]
+  },
+  {
+   "path": "vendor/fuseholder_blade_mini_keystone_3568",
+   "name": "Đế cầu chì lưỡi mini (ATM) Keystone 3568 — cầu chì 10 A",
+   "group": "Nguồn",
+   "source": "step.parts: fuseholder_blade_mini_keystone_3568 — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "16 × 6.7 × 10.2 mm",
+   "note": "Cầu chì chính sau pin 4S.",
+   "nodes": [
+    "socket_fuse_blade",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4"
+   ],
+   "interact": [
+    {
+     "node": "socket_fuse_blade",
+     "type": "socket",
+     "accepts": "fuse-blade-mini",
+     "axis": [
+      0,
+      -1,
+      0
+     ]
+    },
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 4,
+     "nodes": "pin_1..pin_4",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -4.96,
+       -2.79,
+       -1.695
+      ],
+      [
+       -4.96,
+       -2.79,
+       1.705
+      ],
+      [
+       4.96,
+       -2.79,
+       -1.695
+      ],
+      [
+       4.96,
+       -2.79,
+       1.705
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 3.4
+    }
+   ]
+  },
+  {
+   "path": "vendor/fuseholder_cylinder_5x20mm_schurter_0031_8201_horizontal_open",
+   "name": "Đế cầu chì ống 5×20 mm (hàn PCB)",
+   "group": "Nguồn",
+   "source": "step.parts: fuseholder_cylinder_5x20mm_schurter_0031_8201_horizontal_open — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "22.8 × 9.6 × 15.5 mm",
+   "nodes": [
+    "socket_fuse_5x20",
+    "pin_1",
+    "pin_2"
+   ],
+   "interact": [
+    {
+     "node": "socket_fuse_5x20",
+     "type": "socket",
+     "accepts": "fuse-glass-5x20",
+     "axis": [
+      0,
+      -1,
+      0
+     ]
+    },
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 2,
+     "nodes": "pin_1..pin_2",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -11.25,
+       -4.0,
+       -0.0
+      ],
+      [
+       11.25,
+       -4.0,
+       -0.0
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 22.5
+    }
+   ]
+  },
+  {
+   "path": "vendor/batteryholder_keystone_1042_1x18650",
+   "name": "Đế pin 18650 Keystone 1042",
+   "group": "Nguồn",
+   "source": "step.parts: batteryholder_keystone_1042_1x18650 — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "86.4 × 20.6 × 19.8 mm",
+   "note": "Cho pin 4S tự ráp.",
+   "nodes": [
+    "socket_18650",
+    "pin_1",
+    "pin_2",
+    "pin_3",
+    "pin_4"
+   ],
+   "interact": [
+    {
+     "node": "socket_18650",
+     "type": "socket",
+     "accepts": "cell-18650"
+    },
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 4,
+     "nodes": "pin_1..pin_4",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -35.82,
+       -2.6,
+       -8.0
+      ],
+      [
+       -27.6,
+       -3.53,
+       8.0
+      ],
+      [
+       -0.125,
+       -0.01,
+       -0.0
+      ],
+      [
+       27.6,
+       -3.53,
+       -8.0
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 17.99
+    }
+   ]
+  },
+  {
+   "path": "vendor/batteryholder_mpd_bh_18650_pc2",
+   "name": "Đế pin 18650 MPD BH-18650-PC2",
+   "group": "Nguồn",
+   "source": "step.parts: batteryholder_mpd_bh_18650_pc2 — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "77.7 × 20.9 × 22.2 mm",
+   "nodes": [
+    "socket_18650",
+    "pin_1",
+    "pin_2"
+   ],
+   "interact": [
+    {
+     "node": "socket_18650",
+     "type": "socket",
+     "accepts": "cell-18650"
+    },
+    {
+     "node": "pin_1",
+     "type": "pin",
+     "count": 2,
+     "nodes": "pin_1..pin_2",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "positions": [
+      [
+       -35.68,
+       -3.2,
+       -0.0
+      ],
+      [
+       37.22,
+       -3.2,
+       -0.0
+      ]
+     ],
+     "solder_y": 0.0,
+     "pitch_mm": 72.9
+    }
+   ]
+  },
+  {
+   "path": "vendor/esp32_s3_wroom_1",
+   "name": "Module ESP32-S3-WROOM-1 (N8R8) — bộ não BLE",
+   "group": "Module",
+   "source": "step.parts: esp32_s3_wroom_1 — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "18 × 25.5 × 3.1 mm",
+   "note": "18×25,5×3,1 mm, anten PCB. Thân module trên ESP32-S3-DevKitC-1.",
+   "nodes": [
+    "module_esp32s3"
+   ]
+  },
+  {
+   "path": "vendor/esp32_s3_wroom_2",
+   "name": "Module ESP32-S3-WROOM-2",
+   "group": "Module",
+   "source": "step.parts: esp32_s3_wroom_2 — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "18 × 25.5 × 3.1 mm",
+   "note": "Bản flash/PSRAM octal lớn.",
+   "nodes": [
+    "module_esp32s3"
+   ]
+  },
+  {
+   "path": "vendor/esp32_wroom_32e",
+   "name": "Module ESP32-WROOM-32E (tham khảo đời trước)",
+   "group": "Module",
+   "source": "step.parts: esp32_wroom_32e — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "18 × 25.5 × 3.1 mm",
+   "nodes": [
+    "module_esp32"
+   ]
+  },
+  {
+   "path": "vendor/arduino_nano_esp32",
+   "name": "Arduino Nano ESP32 (ESP32-S3)",
+   "group": "Board",
+   "source": "step.parts: arduino_nano_esp32 — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "44.3 × 17.8 × 11.7 mm",
+   "note": "Board ESP32-S3 nhỏ gọn, tham khảo.",
+   "nodes": [
+    "board"
+   ]
+  },
+  {
+   "path": "vendor/raspberry_pi_5",
+   "name": "Raspberry Pi 5 (tham khảo máy tính nhúng)",
+   "group": "Board",
+   "source": "step.parts: raspberry_pi_5 — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "90 × 57.7 × 19.8 mm",
+   "note": "Tham khảo cho phần ROS 2 về sau. Mẫu gốc không có màu → tô PCB xanh, linh kiện xám.",
+   "nodes": [
+    "components",
+    "pcb"
+   ]
+  },
+  {
+   "path": "vendor/raspberry_pi_pico",
+   "name": "Raspberry Pi Pico (tham khảo)",
+   "group": "Board",
+   "source": "step.parts: raspberry_pi_pico — mẫu kiểu KiCad do step.parts phân phối (bản ghi không ghi license)",
+   "dims": "21 × 52.3 × 3.7 mm",
+   "note": "Mẫu gốc không có màu → tô PCB xanh.",
+   "nodes": [
+    "components",
+    "pcb"
+   ]
+  },
+  {
+   "path": "vendor/adafruit_3777_tt_motor",
+   "name": "Động cơ giảm tốc TT (vàng) 1:48",
+   "group": "Động cơ",
+   "source": "step.parts: adafruit_3777_tt_motor — gốc: Adafruit_CAD_Parts (MIT)",
+   "dims": "70.6 × 36.6 × 22.4 mm",
+   "note": "Động cơ giảm tốc phổ biến cho xe robot học tập. Trục ra 2 đầu (D).",
+   "nodes": [
+    "body",
+    "shaft"
+   ],
+   "interact": [
+    {
+     "node": "shaft",
+     "pos": [
+      19.3,
+      11.203,
+      -0.0
+     ],
+     "top": [
+      19.3,
+      13.903,
+      -0.0
+     ],
+     "axis": [
+      0,
+      0,
+      -1
+     ],
+     "origin": [
+      19.3,
+      11.203,
+      -0.0
+     ],
+     "type": "shaft"
+    }
+   ]
+  },
+  {
+   "path": "vendor/adafruit_3802_tt_motor_metal_gear",
+   "name": "Động cơ giảm tốc TT bánh răng kim loại",
+   "group": "Động cơ",
+   "source": "step.parts: adafruit_3802_tt_motor_metal_gear — gốc: Adafruit_CAD_Parts (MIT)",
+   "dims": "72 × 22.4 × 30.3 mm",
+   "nodes": [
+    "body",
+    "shaft"
+   ],
+   "interact": [
+    {
+     "node": "shaft",
+     "pos": [
+      20.0,
+      25.958,
+      -0.0
+     ],
+     "top": [
+      20.0,
+      30.308,
+      -0.0
+     ],
+     "axis": [
+      0,
+      1,
+      0
+     ],
+     "origin": [
+      20.0,
+      25.958,
+      -0.0
+     ],
+     "type": "shaft"
+    }
+   ]
+  },
+  {
+   "path": "vendor/adafruit_711_dc_toy_motor",
+   "name": "Động cơ DC 130 (chổi than)",
+   "group": "Động cơ",
+   "source": "step.parts: adafruit_711_dc_toy_motor — gốc: Adafruit_CAD_Parts (MIT)",
+   "dims": "17 × 20 × 38 mm",
+   "note": "Cỡ động cơ hay dùng cho chổi cạnh / quạt nhỏ. Trục Ø2 mm.",
+   "nodes": [
+    "body",
+    "shaft"
+   ],
+   "interact": [
+    {
+     "node": "shaft",
+     "pos": [
+      -0.138,
+      34.033,
+      -0.0
+     ],
+     "top": [
+      -0.138,
+      38.016,
+      -0.0
+     ],
+     "axis": [
+      0,
+      1,
+      0
+     ],
+     "origin": [
+      -0.138,
+      34.033,
+      -0.0
+     ],
+     "type": "shaft"
+    }
+   ]
+  },
+  {
+   "path": "vendor/adafruit_2941_micro_dc_motor",
+   "name": "Động cơ DC giảm tốc thân servo micro",
+   "group": "Động cơ",
+   "source": "step.parts: adafruit_2941_micro_dc_motor — gốc: Adafruit_CAD_Parts (MIT)",
+   "dims": "11.8 × 35.9 × 30.3 mm",
+   "nodes": [
+    "body",
+    "shaft"
+   ],
+   "interact": [
+    {
+     "node": "shaft",
+     "pos": [
+      0.0,
+      28.8,
+      -4.05
+     ],
+     "top": [
+      0.0,
+      30.3,
+      -4.05
+     ],
+     "axis": [
+      0,
+      1,
+      0
+     ],
+     "origin": [
+      0.0,
+      28.8,
+      -4.05
+     ],
+     "type": "shaft"
+    }
+   ]
+  },
+  {
+   "path": "vendor/sg90_micro_servo",
+   "name": "Servo SG90",
+   "group": "Động cơ",
+   "source": "step.parts: sg90_micro_servo — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "11.8 × 32.4 × 29.9 mm",
+   "note": "Trục ra có khía (spline) 21 răng.",
+   "nodes": [
+    "body",
+    "shaft"
+   ],
+   "interact": [
+    {
+     "node": "shaft",
+     "pos": [
+      0.0,
+      28.425,
+      -5.1
+     ],
+     "top": [
+      0.0,
+      29.9,
+      -5.1
+     ],
+     "axis": [
+      0,
+      1,
+      0
+     ],
+     "origin": [
+      0.0,
+      28.425,
+      -5.1
+     ],
+     "type": "rotary",
+     "angle_deg": 180
+    }
+   ]
+  },
+  {
+   "path": "vendor/adafruit_858_stepper_motor_5vdc",
+   "name": "Động cơ bước 28BYJ-48 5 V",
+   "group": "Động cơ",
+   "source": "step.parts: adafruit_858_stepper_motor_5vdc — gốc: Adafruit_CAD_Parts (MIT)",
+   "dims": "42 × 34.5 × 29 mm",
+   "nodes": [
+    "body",
+    "shaft"
+   ],
+   "interact": [
+    {
+     "node": "shaft",
+     "pos": [
+      0.0,
+      24.6,
+      -10.673
+     ],
+     "top": [
+      0.0,
+      29.0,
+      -10.673
+     ],
+     "axis": [
+      0,
+      1,
+      0
+     ],
+     "origin": [
+      0.0,
+      24.6,
+      -10.673
+     ],
+     "type": "shaft"
+    }
+   ]
+  },
+  {
+   "path": "vendor/bearing_623zz",
+   "name": "Ổ bi 623ZZ (3×10×4 mm)",
+   "group": "Cơ khí",
+   "source": "step.parts: bearing_623zz — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "10 × 10 × 4 mm",
+   "nodes": [
+    "ring_outer",
+    "ring_inner",
+    "shield"
+   ],
+   "interact": [
+    {
+     "node": "ring_inner",
+     "pos": [
+      0.0,
+      2.0,
+      0.0
+     ],
+     "top": [
+      0.0,
+      4.0,
+      0.0
+     ],
+     "axis": [
+      0,
+      1,
+      0
+     ],
+     "origin": [
+      0.0,
+      2.0,
+      0.0
+     ],
+     "type": "shaft"
+    }
+   ]
+  },
+  {
+   "path": "vendor/bearing_f623zz",
+   "name": "Ổ bi có vành F623ZZ",
+   "group": "Cơ khí",
+   "source": "step.parts: bearing_f623zz — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "11.5 × 11.5 × 4 mm",
+   "nodes": [
+    "bearing"
+   ]
+  },
+  {
+   "path": "vendor/bearing_625_zz_shielded_simple",
+   "name": "Ổ bi 625ZZ (5×16×5 mm)",
+   "group": "Cơ khí",
+   "source": "step.parts: bearing_625_zz_shielded_simple — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "16 × 16 × 5 mm",
+   "nodes": [
+    "bearing"
+   ]
+  },
+  {
+   "path": "vendor/bearing_688_zz_shielded_simple",
+   "name": "Ổ bi 688ZZ (8×16×5 mm)",
+   "group": "Cơ khí",
+   "source": "step.parts: bearing_688_zz_shielded_simple — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "16 × 16 × 5 mm",
+   "nodes": [
+    "bearing"
+   ]
+  },
+  {
+   "path": "vendor/bearing_mr85_zz_shielded_simple",
+   "name": "Ổ bi MR85ZZ (5×8×2,5 mm)",
+   "group": "Cơ khí",
+   "source": "step.parts: bearing_mr85_zz_shielded_simple — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "24 × 24 × 8 mm",
+   "nodes": [
+    "bearing"
+   ]
+  },
+  {
+   "path": "vendor/heat_set_insert_m3_short_generic_simple",
+   "name": "Ốc cấy nhiệt M3 (heat-set insert) ngắn",
+   "group": "Ốc vít",
+   "source": "step.parts: heat_set_insert_m3_short_generic_simple — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "6.5 × 6.5 × 6 mm",
+   "note": "Cấy vào vỏ nhựa in 3D / vỏ robot.",
+   "nodes": [
+    "insert_m3"
+   ],
+   "interact": [
+    {
+     "node": "insert_m3",
+     "thread": "M3",
+     "pitch_mm": 0.5,
+     "type": "heat_insert",
+     "axis": [
+      0,
+      -1,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "path": "vendor/iso4762_socket_head_cap_screw_m3x6",
+   "name": "Ốc lục giác chìm M3×6 ISO 4762",
+   "group": "Ốc vít",
+   "source": "step.parts: iso4762_socket_head_cap_screw_m3x6 — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "5.5 × 5.5 × 9 mm",
+   "nodes": [
+    "screw"
+   ],
+   "interact": [
+    {
+     "node": "screw",
+     "thread": "M3",
+     "pitch_mm": 0.5,
+     "type": "screw",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "tip": [
+      0,
+      0,
+      0
+     ],
+     "length_mm": 6.0,
+     "turns_full": 12.0,
+     "drive": "hex socket"
+    }
+   ]
+  },
+  {
+   "path": "vendor/iso4762_socket_head_cap_screw_m3x10",
+   "name": "Ốc lục giác chìm M3×10 ISO 4762",
+   "group": "Ốc vít",
+   "source": "step.parts: iso4762_socket_head_cap_screw_m3x10 — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "5.5 × 5.5 × 13 mm",
+   "nodes": [
+    "screw"
+   ],
+   "interact": [
+    {
+     "node": "screw",
+     "thread": "M3",
+     "pitch_mm": 0.5,
+     "type": "screw",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "tip": [
+      0,
+      0,
+      0
+     ],
+     "length_mm": 10.0,
+     "turns_full": 20.0,
+     "drive": "hex socket"
+    }
+   ]
+  },
+  {
+   "path": "vendor/iso4762_socket_head_cap_screw_m3x12",
+   "name": "Ốc lục giác chìm M3×12 ISO 4762",
+   "group": "Ốc vít",
+   "source": "step.parts: iso4762_socket_head_cap_screw_m3x12 — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "5.5 × 5.5 × 15 mm",
+   "nodes": [
+    "screw"
+   ],
+   "interact": [
+    {
+     "node": "screw",
+     "thread": "M3",
+     "pitch_mm": 0.5,
+     "type": "screw",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "tip": [
+      0,
+      0,
+      0
+     ],
+     "length_mm": 12.0,
+     "turns_full": 24.0,
+     "drive": "hex socket"
+    }
+   ]
+  },
+  {
+   "path": "vendor/iso4762_socket_head_cap_screw_m3x16",
+   "name": "Ốc lục giác chìm M3×16 ISO 4762",
+   "group": "Ốc vít",
+   "source": "step.parts: iso4762_socket_head_cap_screw_m3x16 — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "5.5 × 5.5 × 19 mm",
+   "nodes": [
+    "screw"
+   ],
+   "interact": [
+    {
+     "node": "screw",
+     "thread": "M3",
+     "pitch_mm": 0.5,
+     "type": "screw",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "tip": [
+      0,
+      0,
+      0
+     ],
+     "length_mm": 16.0,
+     "turns_full": 32.0,
+     "drive": "hex socket"
+    }
+   ]
+  },
+  {
+   "path": "vendor/iso4762_socket_head_cap_screw_m3x20",
+   "name": "Ốc lục giác chìm M3×20 ISO 4762",
+   "group": "Ốc vít",
+   "source": "step.parts: iso4762_socket_head_cap_screw_m3x20 — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "5.5 × 5.5 × 23 mm",
+   "nodes": [
+    "screw"
+   ],
+   "interact": [
+    {
+     "node": "screw",
+     "thread": "M3",
+     "pitch_mm": 0.5,
+     "type": "screw",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "tip": [
+      0,
+      0,
+      0
+     ],
+     "length_mm": 20.0,
+     "turns_full": 40.0,
+     "drive": "hex socket"
+    }
+   ]
+  },
+  {
+   "path": "vendor/iso4762_socket_head_cap_screw_m2p5x6",
+   "name": "Ốc lục giác chìm M2.5×6 ISO 4762",
+   "group": "Ốc vít",
+   "source": "step.parts: iso4762_socket_head_cap_screw_m2p5x6 — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "4.5 × 4.5 × 8.5 mm",
+   "note": "Bắt Raspberry Pi / module nhỏ.",
+   "nodes": [
+    "screw"
+   ],
+   "interact": [
+    {
+     "node": "screw",
+     "thread": "M2.5",
+     "pitch_mm": 0.45,
+     "type": "screw",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "tip": [
+      0,
+      0,
+      0
+     ],
+     "length_mm": 6.0,
+     "turns_full": 13.3,
+     "drive": "hex socket"
+    }
+   ]
+  },
+  {
+   "path": "vendor/iso4762_socket_head_cap_screw_m2p5x10",
+   "name": "Ốc lục giác chìm M2.5×10 ISO 4762",
+   "group": "Ốc vít",
+   "source": "step.parts: iso4762_socket_head_cap_screw_m2p5x10 — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "4.5 × 4.5 × 12.5 mm",
+   "note": "Bắt Raspberry Pi / module nhỏ.",
+   "nodes": [
+    "screw"
+   ],
+   "interact": [
+    {
+     "node": "screw",
+     "thread": "M2.5",
+     "pitch_mm": 0.45,
+     "type": "screw",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "tip": [
+      0,
+      0,
+      0
+     ],
+     "length_mm": 10.0,
+     "turns_full": 22.2,
+     "drive": "hex socket"
+    }
+   ]
+  },
+  {
+   "path": "vendor/iso4762_socket_head_cap_screw_m2x6",
+   "name": "Ốc lục giác chìm M2×6 ISO 4762",
+   "group": "Ốc vít",
+   "source": "step.parts: iso4762_socket_head_cap_screw_m2x6 — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "3.8 × 3.8 × 8 mm",
+   "nodes": [
+    "screw"
+   ],
+   "interact": [
+    {
+     "node": "screw",
+     "thread": "M2",
+     "pitch_mm": 0.4,
+     "type": "screw",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "tip": [
+      0,
+      0,
+      0
+     ],
+     "length_mm": 6.0,
+     "turns_full": 15.0,
+     "drive": "hex socket"
+    }
+   ]
+  },
+  {
+   "path": "vendor/iso10642_socket_countersunk_screw_m3x10",
+   "name": "Ốc đầu bằng (côn) lục giác chìm M3×10 ISO 10642",
+   "group": "Ốc vít",
+   "source": "step.parts: iso10642_socket_countersunk_screw_m3x10 — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "6 × 6 × 10 mm",
+   "nodes": [
+    "screw"
+   ],
+   "interact": [
+    {
+     "node": "screw",
+     "thread": "M3",
+     "pitch_mm": 0.5,
+     "type": "screw",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "tip": [
+      0,
+      0,
+      0
+     ],
+     "length_mm": 10.0,
+     "turns_full": 20.0,
+     "drive": "hex socket"
+    }
+   ]
+  },
+  {
+   "path": "vendor/button_head_screw_m3_l0006_simple",
+   "name": "Ốc đầu tròn lục giác chìm M3×6 ISO 7380",
+   "group": "Ốc vít",
+   "source": "step.parts: button_head_screw_m3_l0006_simple — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "5.7 × 5.7 × 7.6 mm",
+   "nodes": [
+    "screw"
+   ],
+   "interact": [
+    {
+     "node": "screw",
+     "thread": "M3",
+     "pitch_mm": 0.5,
+     "type": "screw",
+     "axis": [
+      0,
+      -1,
+      0
+     ],
+     "tip": [
+      0,
+      0,
+      0
+     ],
+     "length_mm": 6.0,
+     "turns_full": 12.0,
+     "drive": "hex socket"
+    }
+   ]
+  },
+  {
+   "path": "vendor/iso4032_hex_nut_m3",
+   "name": "Đai ốc lục giác M3 ISO 4032",
+   "group": "Ốc vít",
+   "source": "step.parts: iso4032_hex_nut_m3 — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "5.5 × 6.3 × 2.4 mm",
+   "nodes": [
+    "nut"
+   ],
+   "interact": [
+    {
+     "node": "nut",
+     "thread": "M3",
+     "pitch_mm": 0.5,
+     "type": "nut",
+     "axis": [
+      0,
+      1,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "path": "vendor/nyloc_nut_m3",
+   "name": "Đai ốc khoá nylon M3",
+   "group": "Ốc vít",
+   "source": "step.parts: nyloc_nut_m3 — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "5.5 × 6.3 × 3.9 mm",
+   "nodes": [
+    "nut"
+   ],
+   "interact": [
+    {
+     "node": "nut",
+     "thread": "M3",
+     "pitch_mm": 0.5,
+     "type": "nut",
+     "axis": [
+      0,
+      1,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "path": "vendor/sparkfun_nut_m3",
+   "name": "Đai ốc M3 (có ren thật)",
+   "group": "Ốc vít",
+   "source": "step.parts: sparkfun_nut_m3 — gốc: thư viện 3D KiCad (kicad-packages3D, CC-BY-SA 4.0 + ngoại lệ dùng trong thiết kế)",
+   "dims": "5.5 × 6.2 × 2.3 mm",
+   "note": "Mẫu có ren xoắn thật.",
+   "nodes": [
+    "nut"
+   ],
+   "interact": [
+    {
+     "node": "nut",
+     "thread": "M3",
+     "pitch_mm": 0.5,
+     "type": "nut",
+     "axis": [
+      0,
+      1,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "path": "vendor/flat_washer_normal_m3_simple",
+   "name": "Long đen phẳng M3 ISO 7089",
+   "group": "Ốc vít",
+   "source": "step.parts: flat_washer_normal_m3_simple — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "7 × 7 × 1.1 mm",
+   "nodes": [
+    "washer"
+   ],
+   "interact": [
+    {
+     "node": "washer",
+     "thread": "M3",
+     "pitch_mm": 0.5,
+     "type": "washer",
+     "axis": [
+      0,
+      1,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "path": "vendor/split_lock_washer_m3_simple",
+   "name": "Long đen vênh M3",
+   "group": "Ốc vít",
+   "source": "step.parts: split_lock_washer_m3_simple — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "7 × 7 × 0.5 mm",
+   "nodes": [
+    "washer"
+   ],
+   "interact": [
+    {
+     "node": "washer",
+     "thread": "M3",
+     "pitch_mm": 0.5,
+     "type": "washer",
+     "axis": [
+      0,
+      1,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "path": "vendor/hex_standoff_m3_12mm_male_female",
+   "name": "Trụ đồng lục giác M3×12 đực-cái",
+   "group": "Ốc vít",
+   "source": "step.parts: hex_standoff_m3_12mm_male_female — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "5.5 × 6.4 × 18 mm",
+   "note": "Trụ đỡ mạch.",
+   "nodes": [
+    "standoff"
+   ],
+   "interact": [
+    {
+     "node": "standoff",
+     "thread": "M3",
+     "pitch_mm": 0.5,
+     "type": "standoff",
+     "axis": [
+      0,
+      1,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "path": "vendor/hex_standoff_m3_15mm_male_female",
+   "name": "Trụ đồng lục giác M3×15 đực-cái",
+   "group": "Ốc vít",
+   "source": "step.parts: hex_standoff_m3_15mm_male_female — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "5.5 × 6.4 × 21 mm",
+   "nodes": [
+    "standoff"
+   ],
+   "interact": [
+    {
+     "node": "standoff",
+     "thread": "M3",
+     "pitch_mm": 0.5,
+     "type": "standoff",
+     "axis": [
+      0,
+      1,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "path": "vendor/standoff_hex_female_female_m3_l0010_simple",
+   "name": "Trụ lục giác M3×10 cái-cái",
+   "group": "Ốc vít",
+   "source": "step.parts: standoff_hex_female_female_m3_l0010_simple — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "8.5 × 7.5 × 10 mm",
+   "nodes": [
+    "standoff"
+   ],
+   "interact": [
+    {
+     "node": "standoff",
+     "thread": "M3",
+     "pitch_mm": 0.5,
+     "type": "standoff",
+     "axis": [
+      0,
+      1,
+      0
+     ],
+     "length_mm": 10.0
+    }
+   ]
+  },
+  {
+   "path": "vendor/standoff_hex_female_female_m3_l0020_simple",
+   "name": "Trụ lục giác M3×20 cái-cái",
+   "group": "Ốc vít",
+   "source": "step.parts: standoff_hex_female_female_m3_l0020_simple — mẫu tham số do step.parts sinh (bản ghi không ghi license)",
+   "dims": "8.5 × 7.5 × 20 mm",
+   "nodes": [
+    "standoff"
+   ],
+   "interact": [
+    {
+     "node": "standoff",
+     "thread": "M3",
+     "pitch_mm": 0.5,
+     "type": "standoff",
+     "axis": [
+      0,
+      1,
+      0
+     ],
+     "length_mm": 20.0
+    }
+   ]
+  }
+ ]
+}

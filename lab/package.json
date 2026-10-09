@@ -1,0 +1,18 @@
+{
+  "name": "robovac-lab",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Phòng lab 3D học linh kiện robot hút bụi / IoT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}

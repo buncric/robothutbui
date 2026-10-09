@@ -1,0 +1,9 @@
+{
+ "fragments": [
+  "vendor",
+  "boards",
+  "robot",
+  "lab"
+ ],
+ "models": []
+}
